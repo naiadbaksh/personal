@@ -1,0 +1,70 @@
+video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -1;
+}
+
+.hero-container {
+    /* background-image: url("../images/mac-and-laptop.png") no-repeat center center; */
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0, 0.2);
+    object-fit: contain;
+}
+
+
+.hero-container > h1 {
+    color: #FFFFFF;
+    font-size: 80px;
+    margin-top: -100px;
+    font-family: 'Avenir Next';
+}
+
+.hero-container > p {
+    color: #FFFFFF;
+    font-size: 32px; 
+    margin-bottom: 10px;
+    font-family: 'Avenir Next';
+}
+
+.fa-play-circle {
+    margin-left: 4px;
+}
+
+@media screen and (max-width: 960px) {
+    .hero-container > h1 {
+        font-size: 70px;
+        margin-top: -150px;
+        font-family: 'Avenir Next';
+    }   
+}
+
+@media screen and (max-width: 768px) {
+    .hero-container > h1 {
+        font-size: 50px;
+        margin-top: -100px;
+        font-family: 'Avenir Next';
+    }
+    
+    .hero-container > p {
+        font-size: 30px;
+        margin-top: -10px;
+        font-family: 'Avenir Next';
+    } 
+    
+    .btn-mobile {
+        display: block;
+        text-decoration: none;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}
+
