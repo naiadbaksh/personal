@@ -1,19 +1,21 @@
 .navbar {
-    background: transparent;
-    height: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.2rem;
-    font-family: 'Avenir';
-    position: sticky;
-    top: 0;
-    z-index: 999;
+  background: transparent;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  font-family: 'Avenir';
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  right: 0;
+  left: 0;
   }
 
-/* .navbar.active {
-  background: linear-gradient(-45deg, #0D87B5, #52429A);
-} */
+.navbar.active {
+  background: linear-gradient(-45deg,  #52429A, #0D87B5);
+}
   
 .navbar-container {
     display: flex;

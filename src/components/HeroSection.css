@@ -1,21 +1,71 @@
-video {
+/* video {
     object-fit: cover;
     width: 100%;
     height: 100%;
     position: fixed;
     z-index: -1;
+} */
+
+/* .macnlaptop {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+} */
+
+
+.tag1 {
+    position: absolute;
+    bottom: 250px;
+    left: 100px;
+    font-family: 'Avenir Next', cursive;
+    font-size: 70px;
+    margin: 25px auto 25px auto;
+    color: #F4F4F4;
+    text-shadow: 2px 2px 2px #123756;
+}
+
+.tag2 {
+    color: #F4F4F4;
+    font-family: "Monaco", monospace;
+    font-size: 30px;
+    font-weight: normal;
+    position: absolute;
+    bottom: 210px;
+    left: 100px;
+    /* text-shadow: 2px 2px 2px #123756; */
+
 }
 
 .hero-container {
-    /* background-image: url("../images/mac-and-laptop.png") no-repeat center center; */
+    background: linear-gradient(-45deg, #0D87B5, #52429A);
+    /* background-image: url("../images/mac-and-laptop.png"); */
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     height: 100vh;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    box-shadow: inset 0 0 0 1000px rgba(0,0,0, 0.2);
-    object-fit: contain;
+    /* box-shadow: inset 0 0 0 1000px rgba(0,0,0, 0.2); */
+    object-fit: cover;
+}
+
+.hero-img {
+    background-image: url("../images/mac-and-laptop.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* box-shadow: inset 0 0 0 1000px rgba(0,0,0, 0.2); */
+    object-fit: cover;
 }
 
 

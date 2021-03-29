@@ -8,6 +8,7 @@ function Navbar() {
     // Menu
     const [click, setClick] = useState(false);
     const [button, setButton] = useState(true);
+    const [navbar, setNavbar] = useState(false);
 
     const handleClick = () => setClick(!click);
     const closeMobileMenu = () => setClick(false);
@@ -26,10 +27,16 @@ function Navbar() {
     }, []);
 
     window.addEventListener('resize', showButton);
+
+    const changeBackground = () => {
+        window.scrollY > 600 ? setNavbar(true) : setNavbar(false);
+    }
+
+    window.addEventListener('scroll', changeBackground);
      
     return (
     <>
-       <nav className="navbar">
+       <nav className={navbar ? 'navbar active' : 'navbar'}>
            <div className="navbar-container">
              <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
                  NAIAD 

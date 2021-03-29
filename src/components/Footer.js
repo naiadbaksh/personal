@@ -6,7 +6,7 @@ import {Link} from 'react-router-dom';
 function Footer() {
     return (
         <div className='footer-container'>
-            <section className="footer-subscription">
+            {/* <section className="footer-subscription">
                 <p className="footer-subscription-heading">
                     Sign up to hear more about me.
                 </p>
@@ -17,23 +17,42 @@ function Footer() {
                     <input type="email" name='email' className="footer-input" placeholder='Your Email'/>
                 </form>
                 <Button buttonStyle='btn--outline'>Submit</Button>
-            </section>
+            </section> */}
                 <div className="footer-links">
                     <div className="footer-link-wrapper">
                         <div className="footer-link-items">
-                           <h2>About</h2> 
+                           {/* <h2>About</h2>  */}
                            <Link to='/about'>About</Link>
                         </div>
                         <div className="footer-link-items">
-                           <h2>Contact</h2> 
+                           {/* <h2>Contact</h2>  */}
                            <Link to='/sign-up'>Contact</Link>
                         </div>
                     </div>
                     <div className="footer-link-wrapper">
                         <div className="footer-link-items">
-                           <h2>Links</h2> 
-                           <Link to=''>Instagram</Link>
-                           <Link to=''>Linkedin</Link>
+                           <a href='https://www.linkedin.com/in/naiad-baksh-91963aa0/' target='_blank' rel='noopener noreferrer'> 
+                           <div className="footer-button">
+                               <i className='fab fa-linkedin'></i>
+                           </div> 
+                           <span>LinkedIn</span>
+                           </a>
+                        </div>
+                        <div className="footer-link-items">
+                           <a href='https://www.twitter.com/naiadcodes ' target='_blank' rel='noopener noreferrer'>
+                           <div className="footer-button">
+                               <i className='fab fa-twitter'></i>
+                           </div> 
+                           <span>Twitter</span>
+                           </a>
+                        </div>
+                        <div className="footer-link-items">
+                           <a href='https://www.instagram.com/naiadcodes' target='_blank' rel='noopener noreferrer'>
+                           <div className="footer-button">
+                               <i className='fab fa-instagram'></i>
+                           </div> 
+                           <span>Instagram</span>
+                           </a>
                         </div>
                     </div>
                 </div>
