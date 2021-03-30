@@ -1,9 +1,11 @@
  import React from 'react';
  import Navbar from '../Navbar';
  import './About.css'
+ import Footer from "../Footer";
 
  export default function About () {
      return (
+        <>
         <div>
         <div className="about-img"></div>
         <div className="middle-container">
@@ -27,5 +29,7 @@
         </div>
         </div>
         </div>
+        <Footer/>
+        </>
     );
  }
