@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import {NavLink} from 'react-router-dom';
 import { Button } from './Button';
+import { Modal } from './Modal';
 import './Navbar.css';
 
 function Navbar() {
@@ -9,6 +10,7 @@ function Navbar() {
     const [click, setClick] = useState(false);
     const [button, setButton] = useState(true);
     const [navbar, setNavbar] = useState(false);
+    const [showModal, setShowModal] = useState(false);
 
     const handleClick = () => setClick(!click);
     const closeMobileMenu = () => setClick(false);
@@ -20,6 +22,11 @@ function Navbar() {
             setButton(true);
          }
     };
+
+    // Function that toggles the "Let's Chat" modal
+    const openModal = () => {
+        setShowModal(prev => !prev)
+    }
 
     // Allow button to disappear based on window size.
     useEffect(() => {
@@ -56,18 +63,19 @@ function Navbar() {
                          About
                      </NavLink> 
                  </li>  
-                 <li className='nav-item'>
+                 {/* <li className='nav-item'>
                      <NavLink exact to='/contact' className='nav-links' activeClassName={'selected'} onClick={closeMobileMenu}>
                          Contact
                      </NavLink> 
-                 </li> 
+                 </li>  */}
                  <li className='nav-item'>
-                     <NavLink exact to='/' className='nav-links-mobile' onClick={closeMobileMenu}>
-                         Sign Up
+                     <NavLink exact to='/' className='nav-links-mobile' onClick={closeMobileMenu, openModal}>
+                         Let's Chat!
                      </NavLink> 
                  </li> 
              </ul>
-             {button && <Button buttonStyle='btn--outline'> Sign Up </Button>}
+             <Button buttonStyle='btn--outline' onClick={openModal}> Let's Chat! </Button>
+             <Modal showModal={showModal} setShowModal= {setShowModal} />
            </div>
        </nav>
     </>
