@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import {NavLink} from 'react-router-dom';
 import { Button } from './Button';
-import { Modal } from './Modal';
+import { Modal } from './Modal/Modal.js'
 import './Navbar.css';
 
 function Navbar() {
@@ -42,7 +42,8 @@ function Navbar() {
     window.addEventListener('scroll', changeBackground);
      
     return (
-    <>
+    <>  
+        <div>
        <nav className={navbar ? 'navbar active' : 'navbar'}>
            <div className="navbar-container">
              <NavLink to="/" className="navbar-logo" onClick={closeMobileMenu}>
@@ -75,9 +76,10 @@ function Navbar() {
                  </li> 
              </ul>
              <Button buttonStyle='btn--outline' onClick={openModal}> Let's Chat! </Button>
-             <Modal showModal={showModal} setShowModal= {setShowModal} />
+             
            </div>
        </nav>
+       <Modal showModal={showModal} setShowModal= {setShowModal}/></div>
     </>
     );
 }
