@@ -1,27 +1,27 @@
-import React from 'react';
+import React from "react";
 
-import FormInput from '../form-input/form-input.component';
-import { ContactContainer, ContactTitle } from './contact-form.styles'
-import { Button } from '../button.js';
+import FormInput from "../form-input/form-input.component";
+import { ContactContainer, ContactTitle } from "./contact-form.styles";
+import { Button } from "../Button";
 
 class ContactForm extends React.Component {
   constructor() {
     super();
 
-    this.state = { 
-      name: '',
-      email: '',
-      text: '',
+    this.state = {
+      name: "",
+      email: "",
+      text: "",
     };
   }
 
-  handleSubmit = async event => {
+  handleSubmit = async (event) => {
     event.preventDefault();
 
     const { name, email, text } = this.state;
   };
 
-  handleChange = event => {
+  handleChange = (event) => {
     const { name, value } = event.target;
 
     this.setState({ [name]: value });
@@ -33,32 +33,32 @@ class ContactForm extends React.Component {
       <ContactContainer>
         <ContactTitle>Like to get in touch?</ContactTitle>
         <span>Drop me a line. I'd love to connect.</span>
-        <form className='sign-up-form' onSubmit={this.handleSubmit}>
+        <form className="sign-up-form" onSubmit={this.handleSubmit}>
           <FormInput
-            type='text'
-            name='name'
+            type="text"
+            name="name"
             value={name}
             onChange={this.handleChange}
-            label='Name'
+            label="Name"
             required
           />
           <FormInput
-            type='email'
-            name='email'
+            type="email"
+            name="email"
             value={email}
             onChange={this.handleChange}
-            label='Email'
+            label="Email"
             required
           />
           <FormInput
-            type='message'
-            name='text'
+            type="message"
+            name="text"
             value={message}
             onChange={this.handleChange}
-            label='Message'
+            label="Message"
             required
           />
-          <Button type='submit'>Send</Button>
+          <Button type="submit">Send</Button>
         </form>
       </ContactContainer>
     );

@@ -1,0 +1,42 @@
+.react-chatbot-kit-chat-container {
+  border-radius: 10px;
+  height: 600px;
+  background: #fff;
+  position: fixed;
+  left: 882px;
+  top: 70px;
+  z-index: 10;
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+}
+
+.react-chatbot-kit-chat-message-container {
+  height: 525px;
+}
+.react-chatbot-kit-chat-bot-message {
+  background: linear-gradient(-45deg, #0d87b5, #52429a);
+}
+
+.react-chatbot-kit-chat-bot-message-arrow {
+  border-right: 8px solid #52429a;
+}
+
+.react-chatbot-kit-chat-input {
+  text-align: left;
+}
+
+.react-chatbot-kit-chat-bot-avatar-container {
+  background-image: url("../../images/Wednesday.jpeg");
+  background-position: 68%20%;
+  background-size: 225%;
+}
+
+.react-chatbot-kit-chat-bot-avatar-letter {
+  display: none;
+}
+
+.react-chatbot-kit-chat-btn-send {
+  background: radial-gradient(ellipse at bottom, #0d87b5, #52429a);
+}

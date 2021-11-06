@@ -1,53 +1,74 @@
 :root {
-    --primary: #FFFFFF;
+  --primary: #ffffff;
 }
 
 .btn {
-    padding: 8px 20px;
-    border-radius: 5px;
-    outline: none;
-    border: none;
-    cursor: pointer;
-    font-family: "Avenir";
+  padding: 8px 20px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-family: "Avenir";
 }
 
 .btn--primary {
-    background-color: var(--primary);
-    color: #242424;
-    border: 1px solid var(--primary);
+  background-color: var(--primary);
+  color: #242424;
+  border: 1px solid var(--primary);
 }
 
 .btn--outline {
-    background-color: transparent;
-    color: #FFFFFF;
-    padding: 8px 20px;
-    border: 1px solid var(--primary);
-    transition: all 0.3s ease-out;
+  background-color: transparent;
+  color: #ffffff;
+  padding: 8px 20px;
+  border: 1px solid var(--primary);
+  transition: all 0.3s ease-out;
 }
 
 .btn-- medium {
-    padding: 8px 20px;
-    font-size: 20px;
+  padding: 8px 20px;
+  font-size: 20px;
 }
 
 .btn-- medium {
-    padding: 12px 26px;
-    font-size: 20px;
+  padding: 12px 26px;
+  font-size: 20px;
 }
 
 .btn--large {
-    padding: 12px 26px;
-    font--size: 20px;
+  padding: 12px 26px;
+  font--size: 20px;
 }
 
-.btn--medium:hover, .btn--large:hover {
-    background: #FFFFFF;
-    color: #242424;
-    transition: all 0.3s ease-out; 
+.btn--medium:hover,
+.btn--large:hover {
+  background: #ffffff;
+  color: #242424;
+  transition: all 0.3s ease-out;
+}
+
+.chatbot-button {
+  width: 50px;
+  height: 50px;
+  border-radius: 40px;
+  border: none;
+  z-index: 9;
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+  background-color: #fff;
+  background-image: url("../images/purpleChatBubble.png");
+  background-size: 70%;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: fixed;
+  left: 1170px;
+  top: 620px;
 }
 
 .footer-btn {
-    padding: 12px 26px;
-    font-size: 20px;
-    color: #242424;
+  padding: 12px 26px;
+  font-size: 20px;
+  color: #242424;
 }
