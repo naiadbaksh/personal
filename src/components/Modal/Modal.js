@@ -7,7 +7,7 @@ import {
   ModalImage,
   CloseModalButton,
 } from "./modal.styles";
-import imageLoc from "./Modal.png";
+import imageLoc from "./Modal2.png";
 import ContactForm from "../contact-form/contact-form.component";
 
 const Modal = ({ showModal, setShowModal }) => {
