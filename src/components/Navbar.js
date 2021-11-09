@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { Button } from "./Button";
-import Modal from "./modal/modal";
+import Modal from "./Modal/modal.component";
 import "./Navbar.css";
 
 function Navbar() {
