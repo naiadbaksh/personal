@@ -90,9 +90,10 @@
 }
 
 .nb-logo {
-  background: url("./nb-logo.png");
-  height: 30px;
-  width: 30px;
+  background-image: url("./nbLogo2.svg");
+  height: 29px;
+  width: 35px;
+  background-size: 100%;
   margin: 0px 0px 8px 8px;
   display: block;
 }

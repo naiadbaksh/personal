@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="104px" height="85px" viewBox="0 0 104 85" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>Group Copy</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-Copy" transform="translate(1.000000, 1.000000)" fill="#FFFFFF" stroke="#FFFFFF">
+            <polygon id="Path" points="11 34 10 81 0 81 0 83 31 83 31 81 20 81 20 50"></polygon>
+            <polygon id="Path-2" points="58 83 11 2 1 2 1 0 22 0 58 63"></polygon>
+            <path d="M37,2 L37,0 L90,0 C94.6666667,2.66666667 97.3333333,5.66666667 98,9 L98,23 C96.6666667,27.6666667 94,30.6666667 90,32 L82,32 C85.3333333,28.6666667 87,26 87,24 L87,9 C85,5 82.6666667,3 80,3 C66,3 59,3 59,3 C59,13 59,18 59,18 L48,2 L37,2 Z" id="Path-3"></path>
+            <path d="M71,36 C85.6666667,36 93,36 93,36 C99,38.6666667 102,42.3333333 102,47 C102,65.6666667 102,75 102,75 C99.3333333,80.3333333 95.6666667,83 91,83 C86.3333333,83 83.6666667,83 83,83 C86.3333333,81 88.3333333,77 89,71 C90,62 89,48 89,48 C89,44 87.3333333,41.3333333 84,40 L71,40 L71,36 Z" id="Path-4"></path>
+        </g>
+    </g>
+</svg>
