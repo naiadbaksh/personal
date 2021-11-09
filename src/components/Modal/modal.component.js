@@ -6,7 +6,7 @@ import {
   ModalContent,
   ModalImage,
   CloseModalButton,
-} from "./modal.styles";
+} from "./Modal.styles.jsx";
 import imageLoc from "./Modal2.png";
 import ContactForm from "../contact-form/contact-form.component";
 
