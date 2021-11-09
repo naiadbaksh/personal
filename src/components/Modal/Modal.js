@@ -10,7 +10,7 @@ import {
 import imageLoc from "./Modal.png";
 import ContactForm from "../contact-form/contact-form.component";
 
-export const Modal = ({ showModal, setShowModal }) => {
+const Modal = ({ showModal, setShowModal }) => {
   const modalRef = useRef();
 
   const animation = useSpring({
@@ -63,3 +63,5 @@ export const Modal = ({ showModal, setShowModal }) => {
     </>
   );
 };
+
+export default Modal;
