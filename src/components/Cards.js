@@ -3,6 +3,10 @@ import CardItem from "./CardItem";
 import "./Cards.css";
 
 function Cards() {
+  const handlePathfinderClick = () => {
+    window.open("https://naiadbaksh.github.io/pathfinding/");
+  };
+
   return (
     <div className="cards" id="projects">
       <h1>Check out my projects</h1>
@@ -10,10 +14,10 @@ function Cards() {
         <div className="cards__wrapper">
           <ul className="cards__items">
             <CardItem
-              src="/images/img-9.jpg"
-              text="This is a project I created with React."
-              label="Project1"
-              path="/services"
+              src="/images/pathfinding.png"
+              text="This is a project I created with React functional components."
+              label="Pathfinding Visualizer"
+              onClick={handlePathfinderClick}
             />
             <CardItem
               src="/images/img-7.jpg"
