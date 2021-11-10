@@ -13,8 +13,8 @@ export default function About() {
             <img className="profile-pic" src="./images/naiad2.png" />
             <h2>Hello.</h2>
             <p>
-              Welcome to my webpage. I am fullstack developer using mainly React
-              and Python.
+              Welcome to my webpage. I'm a fullstack developer working with
+              mainly React and Python.
             </p>
           </div>
           <div className="skills">
