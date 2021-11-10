@@ -114,7 +114,7 @@ h1 {
 .card-item-description {
   color: #fff;
   justify-content: center;
-  padding: 150px 0;
+  padding: 140px 20px 0px 20px;
 }
 
 .cards__item__info {

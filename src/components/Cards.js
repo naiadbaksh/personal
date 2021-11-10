@@ -6,6 +6,7 @@ import pathfindingPhoto from "../images/pathfinding.jpg";
 function Cards() {
   const handlePathfinderClick = () => {
     window.open("https://naiadbaksh.github.io/pathfinding/");
+    return;
   };
 
   const pathfindingDescription = `Using React, State Hooks, and functional components.
@@ -21,7 +22,7 @@ function Cards() {
               src={pathfindingPhoto}
               text="This is a project I created with React functional components."
               label="Pathfinding Visualizer"
-              onClick={handlePathfinderClick}
+              // onClick={handlePathfinderClick}
               description={pathfindingDescription}
             />
             <CardItem
