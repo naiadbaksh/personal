@@ -1,11 +1,15 @@
 import React from "react";
 import CardItem from "./CardItem";
 import "./Cards.css";
+import pathfindingPhoto from "../images/pathfinding.jpg";
 
 function Cards() {
   const handlePathfinderClick = () => {
     window.open("https://naiadbaksh.github.io/pathfinding/");
   };
+
+  const pathfindingDescription = `Using React, State Hooks, and functional components.
+  I implemented several commonly used search algorithms, as well as maze building algorithms.`;
 
   return (
     <div className="cards" id="projects">
@@ -14,10 +18,11 @@ function Cards() {
         <div className="cards__wrapper">
           <ul className="cards__items">
             <CardItem
-              src="/images/pathfinding.png"
+              src={pathfindingPhoto}
               text="This is a project I created with React functional components."
               label="Pathfinding Visualizer"
               onClick={handlePathfinderClick}
+              description={pathfindingDescription}
             />
             <CardItem
               src="/images/img-7.jpg"
