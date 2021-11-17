@@ -10,12 +10,7 @@ function Cards() {
   return (
     <div className="cards" id="projects">
       <h1>Check out my projects!</h1>
-      <div
-        className="cards__container"
-        onClick={() =>
-          window.open("https://naiadbaksh.github.io/pathfinding/", "_blank")
-        }
-      >
+      <div className="cards__container">
         <div className="cards__wrapper">
           <ul className="cards__items">
             <CardItem
@@ -23,6 +18,7 @@ function Cards() {
               text="This is a project I created with React functional components."
               label="Pathfinding Visualizer"
               description={pathfindingDescription}
+              url={"/pathfindingvisualizer"}
             />
             <CardItem
               src="/images/img-7.jpg"

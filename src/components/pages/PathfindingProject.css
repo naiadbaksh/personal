@@ -3,7 +3,7 @@
 }
 
 h2 {
-  margin-top: 50px;
+  margin: 40px;
   font-family: "Bebas Neue", cursive;
   font-size: 40px;
   color: #30394d;
@@ -14,8 +14,44 @@ h3 {
   font-family: "Avenir Next", Helvetica, Arial, sans-serif;
 }
 
+.folder-structure {
+  background-image: url("../../images/folderStructure.png");
+  background-position: center;
+  background-size: 37%;
+  background-repeat: no-repeat;
+  height: 80vh;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* box-shadow: inset 0 0 0 1000px rgba(0,0,0, 0.2); */
+  object-fit: center;
+  border-radius: 15px;
+  z-index: 0;
+  margin: 60px auto 60px;
+}
+
 .project-img {
   background-image: url("../../images/pathfinding.jpg");
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 80vh;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* box-shadow: inset 0 0 0 1000px rgba(0,0,0, 0.2); */
+  object-fit: center;
+  border-radius: 15px;
+  z-index: 0;
+  margin: 90px auto 10px;
+}
+
+.project-sketch {
+  background-image: url("../../images/pathfindingSketch.JPG");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -29,7 +65,11 @@ h3 {
   object-fit: center;
   border-radius: 15px;
   z-index: 0;
-  margin: 100px auto auto;
+  margin: 60px auto 10px;
+}
+
+.project-description {
+  margin: 10px 80px;
 }
 
 .profile-pic {
@@ -55,12 +95,53 @@ h3 {
 }
 
 .skill-row {
-  width: 50%;
-  margin: 100px auto 100px auto;
-  text-align: left;
-  line-height: 2;
+  display: flex;
 }
 
 .skills {
   margin-top: 100px;
+}
+
+.see-live {
+  background-color: #6749dc;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 30px;
+  color: white;
+}
+
+.see-live:hover {
+  background-color: white;
+  cursor: pointer;
+  color: #6749dc;
+  border: 1px solid #6749dc;
+  transition: all 0.3s ease-out;
+}
+
+.snippets {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  max-width: 1120px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.snippet1 {
+  background-image: url("../../images/nodeCodeSnippet.png");
+  width: 600px;
+  height: 400px;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  margin: 40px;
+}
+.snippet2 {
+  background-image: url("../../images/gridCodeSnippet.png");
+  width: 400px;
+  height: 600px;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  margin: 40px;
 }

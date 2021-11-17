@@ -12,40 +12,44 @@ export default function PathfindingProject() {
         <div className="project-img"></div>
         <div className="cta">
           <div className="profile">
-            <Button>See it Live</Button>
-            <h2>Hello.</h2>
-            <p>
-              Welcome to my webpage. I'm a fullstack developer working with
-              mainly React and Python.
+            <btn
+              onClick={() =>
+                window.open(
+                  "https://naiadbaksh.github.io/pathfinding/",
+                  "_blank"
+                )
+              }
+              className="see-live"
+            >
+              See it Live!
+            </btn>
+            <h2>My Process</h2>
+            <p className="project-description">
+              I wanted to create a fully fleshed out pathfinding visualizer,
+              inspired by Clement Mihailescu, a software engineer and Youtuber.
+              His project was decidedly more feature-heavy, however what I
+              achieved I believe was more thought-through and elegant in its
+              design. I started with a sketch of what I wanted the final product
+              to look like to guide my development.
             </p>
           </div>
+          <div className="project-sketch"></div>
           <div className="skills">
-            <h2>My Skills.</h2>
-            <div className="skill-row">
-              <img
-                className="react-img"
-                src="./images/react_flat.png"
-                alt="img3"
-              />
-              <h3>Front End</h3>
-              <p>
-                React is a library developed by Facebook to create robust and
-                flexible web applications. I've used React to create some of my
-                web apps.
-              </p>
-            </div>
-            <div className="skill-row">
-              <img
-                className="python-img"
-                src="./images/python_flat.png"
-                alt="img2"
-              />
-              <h3>Back End</h3>
-              <p>
-                Python is a simple yet powerful programming language. I've used
-                Python and Django on the backend of full stack web applications.
-              </p>
-            </div>
+            <h2 className="system-design">System Design</h2>
+            <p className="project-description">
+              This is the folder structure I used to construct this project. I
+              created components for the visualizer itself, the toolbar, and the
+              node.
+            </p>
+            <div className="folder-structure"></div>
+            <p className="project-description">
+              These are some snippets of the code, which I used to create the
+              node and display a grid of nodes respectively. sd
+            </p>
+            <ul className="snippets">
+              <div className="snippet1"></div>
+              <div className="snippet2"></div>
+            </ul>
           </div>
         </div>
       </div>
