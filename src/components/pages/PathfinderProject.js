@@ -3,6 +3,22 @@ import NavbarFixed from "../Navbar-Fixed";
 import Footer from "../Footer";
 import { Button } from "../Button";
 import "./PathfindingProject.css";
+import Carousel from "../carousel/carousel.component";
+import nodeCodeSnippet from "../../images/nodeCodeSnippet.png";
+import nodeCompCodeSnippet from "../../images/nodeCompCodeSnippet.png";
+import dijkstraCodeSnippet from "../../images/dijkstraCodeSnippet.png";
+
+const carouselData = [
+  {
+    image: nodeCodeSnippet,
+  },
+  {
+    image: nodeCompCodeSnippet,
+  },
+  {
+    image: dijkstraCodeSnippet,
+  },
+];
 
 export default function PathfindingProject() {
   return (
@@ -46,10 +62,11 @@ export default function PathfindingProject() {
               These are some snippets of the code, which I used to create the
               node and display a grid of nodes respectively. sd
             </p>
-            <ul className="snippets">
+            {/* <ul className="snippets">
               <div className="snippet1"></div>
               <div className="snippet2"></div>
-            </ul>
+            </ul> */}
+            <Carousel carouselData={carouselData} />
           </div>
         </div>
       </div>

@@ -8,7 +8,7 @@ function CardItem(props) {
         <Link className="cards__item__link" to={props.url}>
           <figure className="cards__item__pic-wrap" data-category={props.label}>
             <img src={props.src} alt="Travel" className="cards__item__img" />
-            <div className="card-item-overlay" to={props.onClick}>
+            <div className="card-item-overlay">
               <p className="card-item-description">{props.description}</p>
             </div>
           </figure>
