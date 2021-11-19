@@ -13,6 +13,9 @@ h2 {
 h3 {
   font-family: "Avenir Next", Helvetica, Arial, sans-serif;
 }
+p {
+  margin-left: 30px;
+}
 
 .about-img {
   background-image: url("../../images/About.png");
@@ -38,13 +41,13 @@ h3 {
 .python-img {
   width: 25%;
   float: left;
-  margin-right: 30px;
+  margin-left: 30px;
 }
 
 .react-img {
   width: 25%;
   float: right;
-  margin-left: 30px;
+  margin-right: 30px;
 }
 
 .middle-container {

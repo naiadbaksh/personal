@@ -11,12 +11,18 @@ import dijkstraCodeSnippet from "../../images/dijkstraCodeSnippet.png";
 const carouselData = [
   {
     image: nodeCodeSnippet,
+    description:
+      "This is the node constructor which takes in a row and column value and creates a node with a set of values.",
   },
   {
     image: nodeCompCodeSnippet,
+    description:
+      "This is the node component per se. It's a <div></div> with a variable id, depending on its row and column. It has associated classes and styles, as well as functions that are passed through as props.",
   },
   {
     image: dijkstraCodeSnippet,
+    description:
+      "This is the implimentation of Dijkstra's algorithm, which finds the shortest path between a given node and all other nodes in a graph. ",
   },
 ];
 
@@ -58,15 +64,10 @@ export default function PathfindingProject() {
               node.
             </p>
             <div className="folder-structure"></div>
-            <p className="project-description">
-              These are some snippets of the code, which I used to create the
-              node and display a grid of nodes respectively. sd
-            </p>
-            {/* <ul className="snippets">
-              <div className="snippet1"></div>
-              <div className="snippet2"></div>
-            </ul> */}
-            <Carousel carouselData={carouselData} />
+            <h2>Code Snippets</h2>
+            <div className="carousel">
+              <Carousel carouselData={carouselData} />
+            </div>
           </div>
         </div>
       </div>

@@ -36,6 +36,7 @@ const Carousel = ({ carouselData }) => {
                 className="image"
               />
             )}
+            <p className="snippet-description">{slide.description}</p>
           </div>
         );
       })}

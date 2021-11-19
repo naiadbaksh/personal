@@ -13,108 +13,105 @@
     position: fixed;
 } */
 
-
 .tag1 {
-    position: absolute;
-    bottom: 250px;
-    left: 100px;
-    font-family: 'Avenir Next', cursive;
-    font-size: 70px;
-    margin: 25px auto 25px auto;
-    color: #F4F4F4;
-    text-shadow: 2px 2px 2px #123756;
+  position: absolute;
+  bottom: 250px;
+  left: 100px;
+  font-family: "Avenir Next", cursive;
+  font-size: 70px;
+  margin: 25px auto 25px auto;
+  color: #f4f4f4;
+  text-shadow: 2px 2px 2px #123756;
 }
 
 .tag2 {
-    color: #F4F4F4;
-    font-family: "Monaco", monospace;
-    font-size: 30px;
-    font-weight: normal;
-    position: absolute;
-    bottom: 210px;
-    left: 100px;
-    /* text-shadow: 2px 2px 2px #123756; */
-
+  color: #f4f4f4;
+  font-family: "Monaco", monospace;
+  font-size: 30px;
+  font-weight: normal;
+  position: absolute;
+  bottom: 210px;
+  left: 100px;
+  margin-top: 50px;
+  /* text-shadow: 2px 2px 2px #123756; */
 }
 
 .hero-container {
-    background: linear-gradient(-45deg, #0D87B5, #52429A);
-    /* background-image: url("../images/mac-and-laptop.png"); */
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    /* box-shadow: inset 0 0 0 1000px rgba(0,0,0, 0.2); */
-    object-fit: cover;
+  background: linear-gradient(-45deg, #0d87b5, #52429a);
+  /* background-image: url("../images/mac-and-laptop.png"); */
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* box-shadow: inset 0 0 0 1000px rgba(0,0,0, 0.2); */
+  object-fit: cover;
 }
 
 .hero-img {
-    background-image: url("../images/mac-and-laptop.png");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    /* box-shadow: inset 0 0 0 1000px rgba(0,0,0, 0.2); */
-    object-fit: cover;
+  background-image: url("../images/mac-and-laptop.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* box-shadow: inset 0 0 0 1000px rgba(0,0,0, 0.2); */
+  object-fit: cover;
 }
 
-
 .hero-container > h1 {
-    color: #FFFFFF;
-    font-size: 80px;
-    margin-top: -100px;
-    font-family: 'Avenir Next';
+  color: #ffffff;
+  font-size: 80px;
+  margin-top: -100px;
+  font-family: "Avenir Next";
 }
 
 .hero-container > p {
-    color: #FFFFFF;
-    font-size: 32px; 
-    margin-bottom: 10px;
-    font-family: 'Avenir Next';
+  color: #ffffff;
+  font-size: 32px;
+  margin-bottom: 10px;
+  font-family: "Avenir Next";
 }
 
 .fa-play-circle {
-    margin-left: 4px;
+  margin-left: 4px;
 }
 
 @media screen and (max-width: 960px) {
-    .hero-container > h1 {
-        font-size: 70px;
-        margin-top: -150px;
-        font-family: 'Avenir Next';
-    }   
+  .hero-container > h1 {
+    font-size: 70px;
+    margin-top: -150px;
+    font-family: "Avenir Next";
+  }
 }
 
 @media screen and (max-width: 768px) {
-    .hero-container > h1 {
-        font-size: 50px;
-        margin-top: -100px;
-        font-family: 'Avenir Next';
-    }
-    
-    .hero-container > p {
-        font-size: 30px;
-        margin-top: -10px;
-        font-family: 'Avenir Next';
-    } 
-    
-    .btn-mobile {
-        display: block;
-        text-decoration: none;
-    }
+  .hero-container > h1 {
+    font-size: 50px;
+    margin-top: -100px;
+    font-family: "Avenir Next";
+  }
 
-    .btn {
-        width: 100%;
-    }
+  .hero-container > p {
+    font-size: 30px;
+    margin-top: -10px;
+    font-family: "Avenir Next";
+  }
+
+  .btn-mobile {
+    display: block;
+    text-decoration: none;
+  }
+
+  .btn {
+    width: 100%;
+  }
 }
-

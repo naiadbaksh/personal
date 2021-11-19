@@ -35,6 +35,7 @@
   display: flex;
   align-items: center;
   font-family: "Bebas Neue";
+  font-weight: 50;
 }
 
 .fa-typo3 {
