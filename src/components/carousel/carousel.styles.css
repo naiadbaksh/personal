@@ -19,7 +19,7 @@
   right: 32px;
   font-size: 3rem;
   color: #6749dc;
-  z-index: 10;
+  z-index: 2;
   cursor: pointer;
   user-select: none;
 }
@@ -30,7 +30,7 @@
   left: 32px;
   font-size: 3rem;
   color: #6749dc;
-  z-index: 10;
+  z-index: 2;
   cursor: pointer;
   user-select: none;
 }

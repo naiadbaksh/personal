@@ -41,6 +41,7 @@ class ContactForm extends React.Component {
             onChange={this.handleChange}
             label="Name"
             required
+            className="name"
           />
           <FormInput
             type="email"
@@ -57,6 +58,7 @@ class ContactForm extends React.Component {
             onChange={this.handleChange}
             label="Message"
             required
+            style={{ margin: "0px 0px", height: "100px" }}
           />
           <Button type="submit">Send</Button>
         </form>

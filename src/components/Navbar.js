@@ -92,8 +92,7 @@ function Navbar() {
               </li>
             </ul>
             <Button buttonStyle="btn--outline" onClick={openModal}>
-              {" "}
-              Let's Chat!{" "}
+              Let's Chat!
             </Button>
           </div>
         </nav>

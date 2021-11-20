@@ -35,7 +35,7 @@ p {
 .profile-pic {
   height: 200px;
   width: 200px;
-  /*margin: 100px auto 10px auto;*/
+  margin: 0px auto 10px auto;
 }
 
 .python-img {
