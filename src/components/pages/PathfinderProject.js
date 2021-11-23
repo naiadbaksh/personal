@@ -31,7 +31,7 @@ export default function PathfindingProject() {
     <>
       <NavbarFixed className="navbar active" />
       <div className="pathfindingvisualizer">
-        <div className="project-img"></div>
+        <div className="project-img1"></div>
         <div className="cta">
           <div className="profile">
             <btn
@@ -72,11 +72,11 @@ export default function PathfindingProject() {
         </div>
       </div>
       <div>
-        <h3 className="end-quote">
+        <h4 className="end-quote">
           If you'd like to learn more about how I built this project, feel free
           to reach out to me on the socials linked below, or at
           contact@naiad.dev.
-        </h3>
+        </h4>
       </div>
       <Footer />
     </>

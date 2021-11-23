@@ -25,6 +25,7 @@ function Navbar() {
   // Function that toggles the "Let's Chat" modal
   const openModal = () => {
     setShowModal((prev) => !prev);
+    console.log("openModal triggered.");
   };
 
   // Allow button to disappear based on window size.
@@ -91,7 +92,11 @@ function Navbar() {
                 </NavLink>
               </li>
             </ul>
-            <Button buttonStyle="btn--outline" onClick={openModal}>
+            <Button
+              buttonStyle="btn--outline"
+              onClick={openModal}
+              className={button ? "" : "button-hidden"}
+            >
               Let's Chat!
             </Button>
           </div>

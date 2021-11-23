@@ -2,10 +2,14 @@ import React from "react";
 import CardItem from "./CardItem";
 import "./Cards.css";
 import pathfindingPhoto from "../images/pathfinding.jpg";
+import eCommercePhoto from "../images/eCommerce.png";
 
 function Cards() {
   const pathfindingDescription = `Using React, State Hooks, and functional components.
   I implemented several commonly used search algorithms, as well as maze building algorithms.`;
+
+  const eCommerceDescription = `Using React functional and class components, Redux to store and manage front-end data
+  and Firebase to store eCommerce and user information.`;
 
   return (
     <div className="cards" id="projects">
@@ -21,10 +25,11 @@ function Cards() {
               url={"/pathfindingvisualizer"}
             />
             <CardItem
-              src="/images/img-7.jpg"
-              text="This is a project I created with Python."
-              label="Project2"
-              path="/services"
+              src={eCommercePhoto}
+              text="This is an eCommerce website created with React, Redux, Firebase and OAuth."
+              label="Men's eCommerce"
+              description={eCommerceDescription}
+              url={"/ecommerce"}
             />
           </ul>
           <ul className="cards__items">
