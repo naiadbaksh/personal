@@ -67,7 +67,7 @@ h3 {
   align-items: center;
   /* box-shadow: inset 0 0 0 1000px rgba(0,0,0, 0.2); */
   object-fit: center;
-  border-radius: 15px;
+  border-radius: 10px;
   z-index: 0;
   margin: 60px auto 10px;
 }

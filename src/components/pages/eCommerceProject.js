@@ -54,18 +54,23 @@ export default function eCommerceProject() {
               components. I used Redux to be able to use state throughout the
               app to feed data to components without having to "prop drill". The
               payment processing employs Stripe integration, and the database is
-              a Firebase Firestore.
+              a Firebase Firestore. Authentication was done with OAuth2 and
+              payment was processed with Stripe API.
             </p>
+            <h2 className="system-design">System Design</h2>
           </div>
           <div className="project-sketch"></div>
           <div className="skills">
-            <h2 className="system-design">System Design</h2>
+            <h2 className="system-design">Folder Structure</h2>
             <p className="project-description">
               This is the folder structure I used to construct this project. I
               seperated all components into their own folder with their
-              associated style file. Redux files are seperated into their own
-              folders, which contain the actions, reducers, selectors, types and
-              utils.
+              associated style file, which are written as styled components.
+              Alternatively, the pages folder contains the jsx files for each
+              page, and the styles are written is Sass. Firebase has its own
+              folder with a utility file for database setup. Redux files are
+              seperated into their own folders, which contain the actions,
+              reducers, selectors, types and utility files.
             </p>
             <div className="folder-structure"></div>
             <h2>Code Snippets</h2>
