@@ -54,8 +54,7 @@ export default function eCommerceProject() {
               components. I used Redux to be able to use state throughout the
               app to feed data to components without having to "prop drill". The
               payment processing employs Stripe integration, and the database is
-              a Firebase Firestore. Authentication was done with OAuth2 and
-              payment was processed with Stripe API.
+              a Firebase Firestore. Authentication was done with OAuth2.
             </p>
             <h2 className="system-design">System Design</h2>
           </div>
