@@ -1,9 +1,9 @@
 import React from "react";
 import "../../App.css";
-import Cards from "../Cards";
-import HeroSection from "../HeroSection";
-import Footer from "../Footer";
-import Navbar from "../Navbar";
+import Cards from "../cards/Cards";
+import HeroSection from "../hero-section/HeroSection";
+import Footer from "../footer/Footer";
+import Navbar from "../navbar/Navbar";
 
 function Home() {
   return (

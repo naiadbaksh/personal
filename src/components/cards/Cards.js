@@ -1,8 +1,8 @@
 import React from "react";
 import CardItem from "./CardItem";
 import "./Cards.css";
-import pathfindingPhoto from "../images/pathfinding.jpg";
-import eCommercePhoto from "../images/eCommerce.png";
+import pathfindingPhoto from "../../images/pathfinding.jpg";
+import eCommercePhoto from "../../images/eCommerce.png";
 
 function Cards() {
   const pathfindingDescription = `Using React, State Hooks, and functional components.

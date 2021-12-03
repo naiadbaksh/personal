@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
-import "../App.css";
-import { Button } from "./Button";
+import "../../App.css";
+import Button from "../button/Button";
 import "./HeroSection.css";
-import Navbar from "./Navbar";
+import Navbar from "../navbar/Navbar";
 import Typical from "react-typical";
-import ChatBot from "./chatbot/chatbot.component";
+import ChatBot from "../chatbot/chatbot.component";
 
 function HeroSection() {
   const [showChatBot, setShowChatBot] = useState(false);

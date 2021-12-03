@@ -2,7 +2,7 @@ import React from "react";
 
 import FormInput from "../form-input/form-input.component";
 import { ContactContainer, ContactTitle } from "./contact-form.styles";
-import { Button } from "../Button";
+import Button from "../button/Button";
 
 class ContactForm extends React.Component {
   constructor() {

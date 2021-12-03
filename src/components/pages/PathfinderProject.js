@@ -1,8 +1,8 @@
 import React from "react";
-import NavbarFixed from "../Navbar-Fixed";
-import Footer from "../Footer";
-import { Button } from "../Button";
-import "./PathfindingProject.css";
+import NavbarFixed from "../navbar/Navbar-Fixed";
+import Footer from "../footer/Footer";
+import Button from "../button/Button";
+import "./PathfinderProject.css";
 import Carousel from "../carousel/carousel.component";
 import nodeCodeSnippet from "../../images/nodeCodeSnippet.png";
 import nodeCompCodeSnippet from "../../images/nodeCompCodeSnippet.png";
@@ -55,7 +55,7 @@ export default function PathfindingProject() {
               to look like to guide my development.
             </p>
           </div>
-          <div className="project-sketch"></div>
+          <div className="sketch"></div>
           <div className="skills">
             <h2 className="system-design">System Design</h2>
             <p className="project-description">
@@ -63,7 +63,7 @@ export default function PathfindingProject() {
               created components for the visualizer itself, the toolbar, and the
               node.
             </p>
-            <div className="folder-structure"></div>
+            <div className="pf-folder-structure"></div>
             <h2>Code Snippets</h2>
             <div className="carousel">
               <Carousel carouselData={carouselData} />
