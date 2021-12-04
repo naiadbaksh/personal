@@ -91,7 +91,7 @@ function NavbarFixed() {
             </Button>
           </div>
         </nav>
-        <Modal showModal={showModal} setShowModal={setShowModal} />
+        <ContactModal showModal={showModal} setShowModal={setShowModal} />
       </div>
     </>
   );
