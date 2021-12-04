@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import Button from "../button/button.component";
-import Modal from "../../components/modal/Modal.styles";
+import Modal from "../modal/modal.component";
 import "./Navbar.css";
 
 function Navbar() {
