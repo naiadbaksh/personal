@@ -161,10 +161,11 @@
   cursor: pointer;
   text-decoration: none;
   font-size: 2rem;
+  font-weight: lighter;
   display: flex;
   align-items: center;
   margin-bottom: 16px;
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", "Oswald";
   justify-content: center;
 }
 
@@ -175,6 +176,17 @@
   background-size: 100%;
   margin: 0px 0px 8px 8px;
   display: block;
+}
+
+@supports (overflow: -webkit-marquee) and (justify-content: inherit) {
+  .nb-logo-blue {
+    background: url("../graphics/nbLogoBlue.svg");
+    height: 24px;
+    width: 30px;
+    background-size: 100%;
+    margin: 0px 0px 8px 8px;
+    display: block;
+  }
 }
 
 .website-rights {
