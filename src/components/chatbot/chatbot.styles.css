@@ -28,9 +28,10 @@
 }
 
 .react-chatbot-kit-chat-bot-avatar-container {
-  background-image: url("../../images/Wednesday.jpeg");
-  background-position: 68%20%;
-  background-size: 225%;
+  background-image: url("../../images/Wednesday2.jpg");
+  background-position: 18%50%;
+  background-size: 155%;
+  background-repeat: no-repeat;
 }
 
 .react-chatbot-kit-chat-bot-avatar-letter {

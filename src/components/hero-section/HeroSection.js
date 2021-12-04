@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../../App.css";
-import Button from "../button/Button";
+import Button from "../button/button.component";
 import "./HeroSection.css";
 import Navbar from "../navbar/Navbar";
 import Typical from "react-typical";

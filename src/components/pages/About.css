@@ -42,12 +42,16 @@ p {
   width: 25%;
   float: left;
   margin-left: 30px;
+  display: flex;
+  justify-content: center;
 }
 
 .react-img {
   width: 25%;
   float: right;
   margin-right: 30px;
+  display: flex;
+  justify-content: center;
 }
 
 .middle-container {

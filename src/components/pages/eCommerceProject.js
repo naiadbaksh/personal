@@ -1,7 +1,7 @@
 import React from "react";
 import NavbarFixed from "../navbar/Navbar-Fixed";
 import Footer from "../footer/Footer";
-import Button from "../button/Button";
+import Button from "../button/button.component";
 import "./eCommerceProject.css";
 import Carousel from "../carousel/carousel.component";
 import collectionItemSnippet from "../../images/collectionItemCodeSnippet.png";
