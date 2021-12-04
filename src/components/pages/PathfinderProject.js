@@ -55,7 +55,7 @@ export default function PathfindingProject() {
               to look like to guide my development.
             </p>
           </div>
-          <div className="sketch"></div>
+          <div className="pf-sketch"></div>
           <div className="skills">
             <h2 className="system-design">System Design</h2>
             <p className="project-description">
