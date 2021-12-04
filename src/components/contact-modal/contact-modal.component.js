@@ -6,11 +6,11 @@ import {
   ModalContent,
   ModalImage,
   CloseModalButton,
-} from "./modal.styles.jsx";
+} from "./contact-modal.styles.jsx";
 import imageLoc from "../../images/Modal2.png";
 import ContactForm from "../contact-form/contact-form.component";
 
-const Modal = ({ showModal, setShowModal }) => {
+const ContactModal = ({ showModal, setShowModal }) => {
   const modalRef = useRef();
 
   const animation = useSpring({
@@ -64,4 +64,4 @@ const Modal = ({ showModal, setShowModal }) => {
   );
 };
 
-export default Modal;
+export default ContactModal;
