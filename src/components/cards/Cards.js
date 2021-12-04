@@ -8,8 +8,7 @@ function Cards() {
   const pathfindingDescription = `Using React, State Hooks, and functional components.
   I implemented several commonly used search algorithms, as well as maze building algorithms.`;
 
-  const eCommerceDescription = `Using React functional and class components, Redux to store and manage front-end data
-  and Firebase to store eCommerce and user information.`;
+  const eCommerceDescription = `Using React functional and class components, Redux to store and manage front-end data, Firebase to store eCommerce and user information, Stripe for payment processing, and OAuth2 for user authentication.`;
 
   return (
     <div className="cards" id="projects">
@@ -19,7 +18,7 @@ function Cards() {
           <ul className="cards__items">
             <CardItem
               src={pathfindingPhoto}
-              text="This is a project I created with React functional components."
+              text="This project animates common search algorithms. I created it with React functional components."
               label="Pathfinding Visualizer"
               description={pathfindingDescription}
               url={"/pathfindingvisualizer"}
