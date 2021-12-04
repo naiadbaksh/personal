@@ -12,14 +12,14 @@ export default function About() {
         <div className="middle-container">
           <div className="profile">
             <img className="profile-pic" src="./images/naiad2.png" />
-            <h2>Hello.</h2>
+            <h2>HELLO.</h2>
             <p>
               Welcome to my webpage. I'm a fullstack developer using mainly
               React and Python.
             </p>
           </div>
           <div className="skills">
-            <h2>My Skills.</h2>
+            <h2>MY SKILLS.</h2>
             <div className="skill-row">
               <img
                 className="python-img"
