@@ -48,7 +48,7 @@ export default function eCommerceProject() {
             <h2>My Process</h2>
             <p className="project-description">
               I created, with the help of senior engineers Yihua Zhang and
-              Andrei Neagoie a fully functional eCommerce website, featuring
+              Andrei Neagoie, a fully functional eCommerce website featuring
               fine Italian-inspired menswear. The site employs React class and
               functional components, React hooks, Sass and eventually styled
               components. I used Redux to be able to use state throughout the

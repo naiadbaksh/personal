@@ -8,6 +8,7 @@ import Contact from "./components/pages/Contact";
 import ChatBot from "./components/chatbot/chatbot.component";
 import PathfindingProject from "./components/pages/PathfinderProject";
 import eCommerceProject from "./components/pages/eCommerceProject";
+import ChatbotProject from "./components/pages/Chatbot";
 
 function App() {
   return (
@@ -28,6 +29,12 @@ function App() {
             exact
             component={eCommerceProject}
             id="ecommerce"
+          />
+          <Route
+            path="/aichatbot"
+            exact
+            component={ChatbotProject}
+            id="aichatbot"
           />
           <ChatBot />
         </Switch>
