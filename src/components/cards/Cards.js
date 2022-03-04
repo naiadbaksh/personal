@@ -4,6 +4,7 @@ import "./Cards.css";
 import pathfindingPhoto from "../../images/pathfinding.jpg";
 import eCommercePhoto from "../../images/eCommerce.png";
 import chatbotPhoto from "../../images/chatbot.png";
+import thoughtGardenPhoto from "../../images/thoughtGarden.png";
 
 function Cards() {
   const pathfindingDescription = `Using React, State Hooks, and functional components.
@@ -20,11 +21,10 @@ function Cards() {
         <div className="cards__wrapper">
           <ul className="cards__items">
             <CardItem
-              src={pathfindingPhoto}
-              text="This project animates common search algorithms. I created it with React functional components."
-              label="Pathfinding Visualizer"
-              description={pathfindingDescription}
-              url={"/pathfindingvisualizer"}
+              src={thoughtGardenPhoto}
+              text="This is a project I created with Django, React, and the Spotify API."
+              label="ThoughtGarden Spotify Player"
+              url={"/thoughtgarden"}
             />
             <CardItem
               src={eCommercePhoto}
@@ -36,10 +36,11 @@ function Cards() {
           </ul>
           <ul className="cards__items">
             <CardItem
-              src="/images/img-9.jpg"
-              text="This is a project I created with React and Python Django."
-              label="Project1"
-              path="/services"
+              src={pathfindingPhoto}
+              text="This project animates common search algorithms. I created it with React functional components."
+              label="Pathfinding Visualizer"
+              description={pathfindingDescription}
+              url={"/pathfindingvisualizer"}
             />
             <CardItem
               src={chatbotPhoto}

@@ -9,6 +9,7 @@ import ChatBot from "./components/chatbot/chatbot.component";
 import PathfindingProject from "./components/pages/PathfinderProject";
 import eCommerceProject from "./components/pages/eCommerceProject";
 import ChatbotProject from "./components/pages/Chatbot";
+import ThoughtGardenProject from "./components/pages/ThoughtGardenProject";
 
 function App() {
   return (
@@ -35,6 +36,12 @@ function App() {
             exact
             component={ChatbotProject}
             id="aichatbot"
+          />
+          <Route
+            path="/thoughtgarden"
+            exact
+            component={ThoughtGardenProject}
+            id="thoughtgarden"
           />
           <ChatBot />
         </Switch>
