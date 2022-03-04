@@ -48,14 +48,12 @@ export default function ThoughtGardenProject() {
             </btn> */}
             <h2>My Process</h2>
             <p className="project-description">
-              I created, with the help of senior engineers Yihua Zhang and
-              Andrei Neagoie, a fully functional eCommerce website featuring
-              fine Italian-inspired menswear. The site employs React class and
-              functional components, React hooks, Sass and eventually styled
-              components. I used Redux to be able to use state throughout the
-              app to feed data to components without having to "prop drill". The
-              payment processing employs Stripe integration, and the database is
-              a Firebase Firestore. Authentication was done with OAuth2.
+              I created a fullstack web application that allows Spotify Premium
+              user to synchronize playback of podcasts between devices
+              seamlessly. Think having a Netflix Watchparty for a Spotify
+              Podcast! It's a great way to connect with others over fun,
+              informative or interesting ideas. The app uses Django REST, React
+              and the Spotify API.
             </p>
             <h2 className="system-design">System Design</h2>
           </div>

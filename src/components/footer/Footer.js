@@ -52,7 +52,7 @@ function Footer() {
             NAIAD <i class="nb-logo-blue"></i>
           </Link>
         </div>
-        <small className="website-rights">Naiad Baksh © 2021</small>
+        <small className="website-rights">Naiad Baksh © 2022</small>
       </section>
     </div>
   );
