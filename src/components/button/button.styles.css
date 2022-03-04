@@ -72,3 +72,9 @@
   font-size: 20px;
   color: #242424;
 }
+
+@media screen and (max-width: 860px) {
+  #contact {
+    display: none;
+  }
+}
