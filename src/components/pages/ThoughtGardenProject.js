@@ -60,14 +60,10 @@ export default function ThoughtGardenProject() {
           <div className="skills">
             <h2 className="system-design">Folder Structure</h2>
             <p className="project-description">
-              This is the folder structure I used to construct this project. I
-              seperated all components into their own folder with their
-              associated style file, which are written as styled components.
-              Alternatively, the pages folder contains the jsx files for each
-              page, and the styles are written is Sass. Firebase has its own
-              folder with a utility file for database setup. Redux files are
-              seperated into their own folders, which contain the actions,
-              reducers, selectors, types and utility files.
+              This is the abridged folder structure I used to construct this
+              project. I seperated the frontend, backend, and the Spotify API
+              into their own folders, the Spotify folder containing the bulk of
+              the logic as that's where most of the magic happens.
             </p>
             <div className="folder-structure"></div>
             <h2>Code Snippets</h2>
