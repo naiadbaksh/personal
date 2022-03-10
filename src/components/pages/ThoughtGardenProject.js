@@ -4,26 +4,25 @@ import Footer from "../footer/Footer";
 import Button from "../button/button.component";
 import "./ThoughtGardenProject.css";
 import Carousel from "../carousel/carousel.component";
-import collectionItemSnippet from "../../images/collectionItemCodeSnippet.png";
-import collectionPageSnippet from "../../images/collectionPageSnippet.png";
-import userReducerCodeSnippet from "../../images/userReducerCodeSnippet.png";
+import forward15Snippet from "../../images/forwardFifteenSnippet.png";
+import renderHomePageSnippet from "../../images/renderHomePageSnippet.png";
+import thoughtGardenCodeSnippet from "../../images/thoughtGardenCodeSnippet.png";
 import DemoVideo from "../demo-video/demo-video.component";
 
 const carouselData = [
   {
-    image: collectionItemSnippet,
+    image: forward15Snippet,
     description:
-      "This is the collection item component. It takes in item and addItem as props, destructures image, price and item name from the item prop, and uses that data to return a collection item. It also has a button that adds the item to the user's cart, which uses the addItem prop.",
+      "This is a class that inherits from the API View which calls the forward_fifteen() function.",
   },
   {
-    image: collectionPageSnippet,
-    description:
-      "This is the collection page. This comprises collection items, and takes in a collection prop, destructures the title and items from it, and returns a set of collection items using the map function. This way, the components work together to create a large number of items from one source - the database.",
+    image: thoughtGardenCodeSnippet,
+    description: `These are utility functions called by the API Views. The latter finds the progress of the current episode in milliseconds and returns it. The former uses
+      the latter function to execute a Spotify API request to add 15 seconds to the current time of the episode.`,
   },
   {
-    image: userReducerCodeSnippet,
-    description:
-      "This is the user reducer component. Reducers specify how the app's state changes in response to actions sent to the store. Here, the reducer is setting the current user, and spreading in the current state.",
+    image: renderHomePageSnippet,
+    description: "This is code from the front end that renders the home page.",
   },
 ];
 
