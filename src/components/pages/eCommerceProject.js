@@ -37,7 +37,7 @@ export default function eCommerceProject() {
             <btn
               onClick={() =>
                 window.open(
-                  "https://619c1e991e2336007418ee38--jovial-wozniak-c11748.netlify.app/",
+                  "https://jovial-wozniak-c11748.netlify.app/",
                   "_blank"
                 )
               }
