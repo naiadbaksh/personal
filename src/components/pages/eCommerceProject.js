@@ -71,7 +71,7 @@ export default function eCommerceProject() {
               seperated into their own folders, which contain the actions,
               reducers, selectors, types and utility files.
             </p>
-            <div className="folder-structure"></div>
+            <div className="ecom-folder-structure"></div>
             <h2>Code Snippets</h2>
             <div className="carousel">
               <Carousel carouselData={carouselData} />
