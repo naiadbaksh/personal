@@ -48,3 +48,7 @@
     background: linear-gradient(-45deg, #52429a, #0d87b5);
   }
 }
+
+.an-bold {
+  font-family: "AN-Bold";
+}

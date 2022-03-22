@@ -47,7 +47,11 @@ function Navbar() {
       <div>
         <nav className={navbar ? "navbar active" : "navbar"}>
           <div className="navbar-container">
-            <NavLink to="/" className="navbar-logo" onClick={closeMobileMenu}>
+            <NavLink
+              to="/"
+              className="navbar-logo an-bold"
+              onClick={closeMobileMenu}
+            >
               NAIAD
               <i class="nb-logo"></i>
             </NavLink>
