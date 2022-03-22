@@ -28,6 +28,18 @@ class MessageParser {
       setTimeout(this.actionProvider.handleExperience(), 1000);
     } else if (lowercase.includes("interview")) {
       setTimeout(this.actionProvider.handleInterview(), 1000);
+    } else if (
+      lowercase.includes("fuck") ||
+      lowercase.includes("bitch") ||
+      lowercase.includes("cunt") ||
+      lowercase.includes("shit") ||
+      lowercase.includes("ass") ||
+      lowercase.includes("faggot") ||
+      lowercase.includes("nigger")
+    ) {
+      setTimeout(this.actionProvider.notInterested(), 1000);
+    } else {
+      setTimeout(this.actionProvider.sorry(), 1000);
     }
   }
 }

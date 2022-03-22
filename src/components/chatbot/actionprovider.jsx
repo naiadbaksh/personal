@@ -39,6 +39,20 @@ class ActionProvider {
     this.addMessageToState(message);
   };
 
+  sorry = () => {
+    const message = this.createChatBotMessage(
+      "Sorry my understanding is limited, please try again."
+    );
+    this.addMessageToState(message);
+  };
+
+  notInterested = () => {
+    const message = this.createChatBotMessage(
+      "I'm not interested in that kind of language. Try again."
+    );
+    this.addMessageToState(message);
+  };
+
   handleEducation = () => {
     const message = this.createChatBotMessage(
       "Here's what you need to know about Naiad's education.",
