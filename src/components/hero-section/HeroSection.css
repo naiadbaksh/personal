@@ -97,7 +97,7 @@
   color: #ffffff;
   font-size: 32px;
   margin-bottom: 10px;
-  font-family: "Avenir Next";
+  font-family: "Avenir Next", Helvetica;
 }
 
 .fa-play-circle {
@@ -108,7 +108,7 @@
   .hero-container > h1 {
     font-size: 70px;
     margin-top: -150px;
-    font-family: "Avenir Next";
+    font-family: "Avenir Next", Helvetica;
   }
 }
 
@@ -116,13 +116,13 @@
   .hero-container > h1 {
     font-size: 50px;
     margin-top: -100px;
-    font-family: "Avenir Next";
+    font-family: "Avenir Next", Helvetica;
   }
 
   .hero-container > p {
     font-size: 30px;
     margin-top: -10px;
-    font-family: "Avenir Next";
+    font-family: "Avenir Next", Helvetica;
   }
 
   .btn-mobile {
