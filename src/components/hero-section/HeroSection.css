@@ -36,7 +36,7 @@
   position: absolute;
   bottom: 250px;
   left: 100px;
-  font-family: "Avenir Next", Arial, Helvetica, sans-serif;
+  font-family: "Avenir Next", Arial, "Nunito", sans-serif;
   font-size: 70px;
   margin: 25px auto 25px auto;
   color: #f4f4f4;
@@ -97,7 +97,7 @@
   color: #ffffff;
   font-size: 32px;
   margin-bottom: 10px;
-  font-family: "Avenir Next", Helvetica;
+  font-family: "Avenir Next", "Nunito";
 }
 
 .fa-play-circle {
@@ -108,7 +108,7 @@
   .hero-container > h1 {
     font-size: 70px;
     margin-top: -150px;
-    font-family: "Avenir Next", Helvetica;
+    font-family: "Avenir Next", "Nunito";
   }
 }
 
@@ -116,13 +116,13 @@
   .hero-container > h1 {
     font-size: 50px;
     margin-top: -100px;
-    font-family: "Avenir Next", Helvetica;
+    font-family: "Avenir Next", "Nunito";
   }
 
   .hero-container > p {
     font-size: 30px;
     margin-top: -10px;
-    font-family: "Avenir Next", Helvetica;
+    font-family: "Avenir Next", "Nunito";
   }
 
   .btn-mobile {

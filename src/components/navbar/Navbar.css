@@ -5,7 +5,7 @@
   justify-content: center;
   align-items: center;
   font-size: 1.2rem;
-  font-family: "Avenir", Helvetica;
+  font-family: "Avenir", "Nunito";
   position: fixed;
   top: 0;
   z-index: 9;
@@ -65,7 +65,7 @@
   text-decoration: none;
   padding: 0.5rem 1rem;
   height: 100%;
-  font-family: "Avenir", Helvetica;
+  font-family: "Avenir", "Nunito";
 }
 
 .nav-links:hover {
@@ -83,7 +83,7 @@
 
 .nav-links-mobile {
   display: none;
-  font-family: "Avenir", Helvetica;
+  font-family: "Avenir", "Nunito";
 }
 
 .menu-icon {

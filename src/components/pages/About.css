@@ -4,14 +4,14 @@
 
 h2 {
   margin-top: 50px;
-  font-family: "Bebas Neue", Helvetica;
+  font-family: "Bebas Neue", "Nunito";
   font-size: 40px;
   color: #30394d;
   padding-bottom: 10px;
 }
 
 h3 {
-  font-family: "Avenir Next", Helvetica, Arial, sans-serif;
+  font-family: "Avenir Next", "Nunito", Arial, sans-serif;
 }
 p {
   margin-left: 30px;

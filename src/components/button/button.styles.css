@@ -8,7 +8,7 @@
   outline: none;
   border: none;
   cursor: pointer;
-  font-family: "Avenir";
+  font-family: "Avenir", "Nunito";
 }
 
 .btn--primary {
