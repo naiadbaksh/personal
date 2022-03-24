@@ -133,4 +133,8 @@
   .btn {
     width: 100%;
   }
+
+  .main-chatbot {
+    display: none;
+  }
 }

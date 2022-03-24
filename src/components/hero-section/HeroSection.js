@@ -43,7 +43,9 @@ function HeroSection() {
               ]}
             />
           </div>
-          {showChatBot ? <ChatBot showChatBot={showChatBot} /> : null}
+          {showChatBot ? (
+            <ChatBot className="main-chatbot" showChatBot={showChatBot} />
+          ) : null}
           <button
             className="chatbot-button"
             onClick={() => setShowChatBot((prev) => !prev)}
