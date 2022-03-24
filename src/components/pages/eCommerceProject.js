@@ -76,14 +76,6 @@ export default function eCommerceProject() {
             <div className="carousel">
               <Carousel carouselData={carouselData} />
             </div>
-            <btn
-              onClick={() =>
-                window.open("https://github.com/naiadbaksh/eCommerce", "_blank")
-              }
-              className="see-live"
-            >
-              See code on Github.
-            </btn>
           </div>
         </div>
       </div>

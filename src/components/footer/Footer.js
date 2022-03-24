@@ -44,6 +44,18 @@ function Footer() {
               <span>Instagram</span>
             </a>
           </div>
+          <div className="footer-link-items">
+            <a
+              href="https://github.com/naiadbaksh"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className="footer-button">
+                <i className="fab fa-github"></i>
+              </div>
+              <span>GitHub</span>
+            </a>
+          </div>
         </div>
       </div>
       <section className="social-media">
