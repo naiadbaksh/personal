@@ -9,7 +9,7 @@ import ChatBot from "../chatbot/chatbot.component";
 function HeroSection() {
   const [showChatBot, setShowChatBot] = useState(false);
   const toggleChatBot = () => {
-    if (!showChatBot) {
+    if (!showChatBot && window.innerWidth > 768) {
       setShowChatBot(true);
     } else {
       return;
@@ -21,6 +21,7 @@ function HeroSection() {
     }, 6500);
     return () => clearTimeout(timer);
   }, []);
+
   return (
     <>
       <div className="hero-container">
