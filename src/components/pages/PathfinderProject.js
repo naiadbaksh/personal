@@ -75,7 +75,7 @@ export default function PathfindingProject() {
         <h4 className="end-quote">
           If you'd like to learn more about how I built this project, feel free
           to reach out to me on the socials linked below, or at
-          contact@naiad.dev.
+          naiadbaksh@gmail.com.
         </h4>
       </div>
       <Footer />

@@ -96,7 +96,7 @@ class ActionProvider {
 
   contact = () => {
     const message = this.createChatBotMessage(
-      "Naiad can be reached by call or text at 416-846-1726 or at contact@naiad.dev - submit a query using the Let's Chat button above."
+      "Naiad can be reached by call or text at 416-846-1726 or at naiadbaksh@gmail.com - submit a query using the Let's Chat button above."
     );
     this.addMessageToState(message);
   };
