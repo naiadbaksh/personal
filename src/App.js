@@ -2,9 +2,9 @@ import React, { useEffect } from "react";
 import Navbar from "./components/navbar/Navbar";
 import {
   BrowserRouter as Router,
-  Routes,
+  Switch,
   Route,
-  useNavigate,
+  useHistory,
 } from "react-router-dom";
 import "./App.css";
 import Home from "./components/pages/Home";
@@ -17,32 +17,33 @@ import ChatbotProject from "./components/pages/Chatbot";
 import ThoughtGardenProject from "./components/pages/ThoughtGardenProject";
 
 function AppContent() {
-  const navigate = useNavigate();
+  const history = useHistory();
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const redirect = params.get("redirect");
 
     if (redirect) {
-      navigate(redirect, { replace: true });
+      history.replace(decodeURIComponent(redirect));
     }
-  }, [navigate]);
+  }, [history]);
 
   return (
     <>
       <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
+      <Switch>
+        <Route path="/" exact component={Home} />
+        <Route path="/about" exact component={About} />
+        <Route path="/contact" exact component={Contact} />
         <Route
           path="/pathfindingvisualizer"
-          element={<PathfindingProject />}
+          exact
+          component={PathfindingProject}
         />
-        <Route path="/ecommerce" element={<eCommerceProject />} />
-        <Route path="/aichatbot" element={<ChatbotProject />} />
-        <Route path="/thoughtgarden" element={<ThoughtGardenProject />} />
-      </Routes>
+        <Route path="/ecommerce" exact component={eCommerceProject} />
+        <Route path="/aichatbot" exact component={ChatbotProject} />
+        <Route path="/thoughtgarden" exact component={ThoughtGardenProject} />
+      </Switch>
       <ChatBot />
     </>
   );
