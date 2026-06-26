@@ -7,7 +7,7 @@ import "./Navbar.css";
 function NavbarFixed() {
   // Menu
   const [click, setClick] = useState(false);
-  const [button, setButton] = useState(true);
+  const [button, setButton] = useState(window.innerWidth > 960);
   const [navbar, setNavbar] = useState(false);
   const [showModal, setShowModal] = useState(false);
 

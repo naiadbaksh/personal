@@ -11,7 +11,11 @@ export default function About() {
         <div className="about-img"></div>
         <div className="middle-container">
           <div className="profile">
-            <img className="profile-pic" src="./images/naiad2.png" />
+            <img
+              className="profile-pic"
+              src="./images/naiad2.png"
+              alt="Naiad Baksh"
+            />
             <h2>HELLO.</h2>
             <p>
               Welcome to my webpage. I'm a self-taught software engineer from

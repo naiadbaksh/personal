@@ -10,7 +10,6 @@ import "./App.css";
 import Home from "./components/pages/Home";
 import About from "./components/pages/About";
 import Contact from "./components/pages/Contact";
-import ChatBot from "./components/chatbot/chatbot.component";
 import PathfindingProject from "./components/pages/PathfinderProject";
 import eCommerceProject from "./components/pages/eCommerceProject";
 import ChatbotProject from "./components/pages/Chatbot";
@@ -44,7 +43,6 @@ function AppContent() {
         <Route path="/aichatbot" exact component={ChatbotProject} />
         <Route path="/thoughtgarden" exact component={ThoughtGardenProject} />
       </Switch>
-      <ChatBot />
     </>
   );
 }

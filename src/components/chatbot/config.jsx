@@ -1,16 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import { createChatBotMessage } from "react-chatbot-kit";
 import Options from "../options/options.component";
 import BackgroundInfo from "../background-info/background-info.component";
 import YesNo from "../options/yes-no.component";
-
-const headerStyle = {
-  height: "40px",
-  justifyContent: "space-between",
-};
-const pStyle = {
-  width: "180px",
-};
 
 const config = {
   botName: "Wednesday",
@@ -21,7 +13,7 @@ const config = {
   Would you like to know more about him?`,
       {
         widget: "yesOrNo",
-      }
+      },
     ),
   ],
   // customComponents: {

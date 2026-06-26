@@ -17,8 +17,6 @@ class ContactForm extends React.Component {
 
   handleSubmit = async (event) => {
     event.preventDefault();
-
-    const { name, email, text } = this.state;
   };
 
   handleChange = (event) => {

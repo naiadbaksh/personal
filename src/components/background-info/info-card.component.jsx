@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./background-info.styles.css";
 
 const InfoCard = ({
