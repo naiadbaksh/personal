@@ -15,10 +15,6 @@ class ContactForm extends React.Component {
     };
   }
 
-  handleSubmit = async (event) => {
-    event.preventDefault();
-  };
-
   handleChange = (event) => {
     const { name, value } = event.target;
 
@@ -31,7 +27,18 @@ class ContactForm extends React.Component {
       <ContactContainer>
         <ContactTitle>Like to get in touch?</ContactTitle>
         <span id="contact-form-help">Drop me a line. I'd love to connect.</span>
-        <form className="sign-up-form" onSubmit={this.handleSubmit}>
+        <form
+          className="sign-up-form"
+          action="https://formsubmit.co/naiadbaksh@gmail.com"
+          method="POST"
+          acceptCharset="UTF-8"
+        >
+          <input
+            type="hidden"
+            name="_subject"
+            value="New contact form submission"
+          />
+          <input type="hidden" name="_captcha" value="false" />
           <FormInput
             type="text"
             name="name"

@@ -2,10 +2,13 @@ import styled from "styled-components";
 import { MdClose } from "react-icons/md";
 
 export const BackgroundContainer = styled.div`
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.8);
   position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 1rem;
+  box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.8);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,8 +16,10 @@ export const BackgroundContainer = styled.div`
 `;
 
 export const ModalWrapper = styled.div`
-  width: 800px;
-  height: 500px;
+  width: min(800px, 100%);
+  max-width: 800px;
+  min-height: 320px;
+  max-height: min(500px, calc(100vh - 2rem));
   box-shadow: 0 5px 16px rgba(0, 0, 0, 0.2);
   background: #fff;
   color: #000;
@@ -23,6 +28,7 @@ export const ModalWrapper = styled.div`
   position: relative;
   z-index: 10;
   border-radius: 10px;
+  overflow: hidden;
 `;
 
 export const ModalImage = styled.img`
