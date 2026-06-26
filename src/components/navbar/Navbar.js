@@ -45,16 +45,29 @@ function Navbar() {
   return (
     <>
       <div>
-        <nav className={navbar ? "navbar active" : "navbar"}>
+        <nav
+          className={navbar ? "navbar active" : "navbar"}
+          aria-label="Primary"
+        >
           <div className="navbar-container">
             <NavLink to="/" className="navbar-logo" onClick={closeMobileMenu}>
               NAIAD
               <i class="nb-logo"></i>
             </NavLink>
-            <div className="menu-icon" onClick={handleClick}>
+            <button
+              type="button"
+              className="menu-icon"
+              onClick={handleClick}
+              aria-label={click ? "Close navigation menu" : "Open navigation menu"}
+              aria-expanded={click}
+              aria-controls="primary-nav-menu"
+            >
               <i className={click ? "fas fa-times" : "fas fa-bars"} />
-            </div>
-            <ul className={click ? "nav-menu active" : "nav-menu"}>
+            </button>
+            <ul
+              id="primary-nav-menu"
+              className={click ? "nav-menu active" : "nav-menu"}
+            >
               <li className="nav-item">
                 <NavLink
                   exact
