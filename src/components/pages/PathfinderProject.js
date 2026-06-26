@@ -1,7 +1,6 @@
 import React from "react";
 import NavbarFixed from "../navbar/Navbar-Fixed";
 import Footer from "../footer/Footer";
-import Button from "../button/button.component";
 import "./PathfinderProject.css";
 import Carousel from "../carousel/carousel.component";
 import nodeCodeSnippet from "../../images/nodeCodeSnippet.png";
@@ -38,7 +37,7 @@ export default function PathfindingProject() {
               onClick={() =>
                 window.open(
                   "https://naiadbaksh.github.io/pathfinding/",
-                  "_blank"
+                  "_blank",
                 )
               }
               className="see-live"

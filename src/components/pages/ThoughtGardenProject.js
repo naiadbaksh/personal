@@ -1,7 +1,6 @@
 import React from "react";
 import NavbarFixed from "../navbar/Navbar-Fixed";
 import Footer from "../footer/Footer";
-import Button from "../button/button.component";
 import "./ThoughtGardenProject.css";
 import Carousel from "../carousel/carousel.component";
 import forward15Snippet from "../../images/forwardFifteenSnippet.png";

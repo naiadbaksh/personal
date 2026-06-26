@@ -1,38 +1,19 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import Button from "../button/button.component";
 import ContactModal from "../contact-modal/contact-modal.component";
 import "./Navbar.css";
 
 function NavbarFixed() {
-  // Menu
   const [click, setClick] = useState(false);
-  const [button, setButton] = useState(window.innerWidth > 960);
-  const [navbar, setNavbar] = useState(false);
   const [showModal, setShowModal] = useState(false);
 
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
 
-  const showButton = () => {
-    if (window.innerWidth <= 960) {
-      setButton(false);
-    } else {
-      setButton(true);
-    }
-  };
-
-  // Function that toggles the "Let's Chat" modal
   const openModal = () => {
     setShowModal((prev) => !prev);
   };
-
-  // Allow button to disappear based on window size.
-  useEffect(() => {
-    showButton();
-  }, []);
-
-  window.addEventListener("resize", showButton);
 
   return (
     <>

@@ -1,7 +1,6 @@
 import React from "react";
 import NavbarFixed from "../navbar/Navbar-Fixed";
 import Footer from "../footer/Footer";
-import Button from "../button/button.component";
 import "./eCommerceProject.css";
 import Carousel from "../carousel/carousel.component";
 import collectionItemSnippet from "../../images/collectionItemCodeSnippet.png";
@@ -38,7 +37,7 @@ export default function eCommerceProject() {
               onClick={() =>
                 window.open(
                   "https://jovial-wozniak-c11748.netlify.app/",
-                  "_blank"
+                  "_blank",
                 )
               }
               className="see-live"
