@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Chatbot from "react-chatbot-kit";
 import "react-chatbot-kit/build/main.css";
 import ActionProvider from "./actionprovider";
@@ -8,15 +8,13 @@ import "./chatbot.styles.css";
 
 const ChatBot = () => {
   return (
-    <>
-      <div>
-        <Chatbot
-          config={config}
-          actionProvider={ActionProvider}
-          messageParser={MessageParser}
-        />
-      </div>
-    </>
+    <div>
+      <Chatbot
+        config={config}
+        actionProvider={ActionProvider}
+        messageParser={MessageParser}
+      />
+    </div>
   );
 };
 

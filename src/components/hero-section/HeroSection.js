@@ -9,15 +9,15 @@ import ChatBot from "../chatbot/chatbot.component";
 function HeroSection() {
   const [showChatBot, setShowChatBot] = useState(false);
   const toggleChatBot = () => {
-    if (!showChatBot && window.innerWidth > 768) {
-      setShowChatBot(true);
-    } else {
-      return;
+    if (window.innerWidth > 768) {
+      setShowChatBot((prev) => !prev);
     }
   };
   useEffect(() => {
     const timer = setTimeout(() => {
-      toggleChatBot();
+      if (window.innerWidth > 768) {
+        setShowChatBot(true);
+      }
     }, 6500);
     return () => clearTimeout(timer);
   }, []);
@@ -45,11 +45,22 @@ function HeroSection() {
             />
           </div>
           {showChatBot ? (
-            <ChatBot className="main-chatbot" showChatBot={showChatBot} />
+            <div className="chatbot-wrapper">
+              <button
+                type="button"
+                className="chatbot-close-button"
+                onClick={() => setShowChatBot(false)}
+                aria-label="Close chatbot"
+              >
+                ×
+              </button>
+              <ChatBot className="main-chatbot" showChatBot={showChatBot} />
+            </div>
           ) : null}
           <button
             className="chatbot-button"
-            onClick={() => setShowChatBot((prev) => !prev)}
+            onClick={toggleChatBot}
+            aria-label="Toggle chatbot"
           ></button>
         </div>
       </div>
