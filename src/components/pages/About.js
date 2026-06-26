@@ -6,14 +6,14 @@ import Footer from "../footer/Footer";
 export default function About() {
   return (
     <>
-      <div>
+      <div className="about-page">
         <Navbar />
         <div className="about-img"></div>
         <div className="middle-container">
           <div className="profile">
             <img
               className="profile-pic"
-              src="./images/naiad2.png"
+              src="/images/naiad-photo.jpg"
               alt="Naiad Baksh"
             />
             <h2>HELLO.</h2>

@@ -53,17 +53,16 @@ const config = {
         info: [
           {
             answer:
-              "Over the past five years I've built full-stack applications using React, Node.js, Python, GraphQL, SQL, NoSQL, and AWS, with a focus on clean architecture, performance, and user experience.",
+              "Over the past five years Naiad has built full-stack applications using React, Node.js, Python, GraphQL, SQL, NoSQL, and AWS, with a focus on clean architecture, performance, and user experience.",
             id: 1,
           },
           {
             answer:
-              "I've contributed to enterprise products used by thousands of users, shipping features across the entire stack—from database design and APIs to responsive frontends and cloud deployments.",
+              "Naiad has contributed to enterprise products used by thousands of users, shipping features across the entire stack—from database design and APIs to responsive frontends and cloud deployments.",
             id: 2,
           },
           {
-            answer:
-              "I'm passionate about solving challenging problems, learning new technologies, and building software that makes a meaningful impact. I enjoy collaborating with cross-functional teams and taking ownership from idea to production.",
+            answer: `"I'm passionate about solving challenging problems, learning new technologies, and building software that makes a meaningful impact. I enjoy collaborating with cross-functional teams and taking ownership from idea to production."`,
             id: 3,
           },
         ],
