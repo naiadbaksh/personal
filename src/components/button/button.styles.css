@@ -18,10 +18,10 @@
 }
 
 .btn--outline {
-  background-color: transparent;
+  background-color: #30394d;
   color: #ffffff;
   padding: 8px 20px;
-  border: 1px solid var(--primary);
+  border: 2px solid #30394d;
   transition: all 0.3s ease-out;
 }
 
@@ -45,6 +45,11 @@
   background: #ffffff;
   color: #242424;
   transition: all 0.3s ease-out;
+}
+
+.btn:focus-visible {
+  outline: 3px solid #2f6fed;
+  outline-offset: 2px;
 }
 
 .footer-btn {

@@ -30,33 +30,40 @@ class ContactForm extends React.Component {
     return (
       <ContactContainer>
         <ContactTitle>Like to get in touch?</ContactTitle>
-        <span>Drop me a line. I'd love to connect.</span>
+        <span id="contact-form-help">Drop me a line. I'd love to connect.</span>
         <form className="sign-up-form" onSubmit={this.handleSubmit}>
           <FormInput
             type="text"
             name="name"
+            id="name"
             value={name}
             onChange={this.handleChange}
             label="Name"
             required
             className="name"
+            autoComplete="name"
           />
           <FormInput
             type="email"
             name="email"
+            id="email"
             value={email}
             onChange={this.handleChange}
             label="Email"
             required
+            autoComplete="email"
           />
           <FormInput
-            type="message"
+            type="text"
             name="text"
+            id="message"
             value={message}
             onChange={this.handleChange}
             label="Message"
             required
             style={{ margin: "0px 0px", height: "100px" }}
+            autoComplete="off"
+            aria-describedby="contact-form-help"
           />
           <Button type="submit">Send</Button>
         </form>

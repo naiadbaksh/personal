@@ -14,7 +14,7 @@ export default function About() {
             <img
               className="profile-pic"
               src="/images/naiad-photo.jpg"
-              alt="Naiad Baksh"
+              alt="Portrait of Naiad Baksh"
             />
             <h2>HELLO.</h2>
             <p>

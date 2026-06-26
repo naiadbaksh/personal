@@ -58,7 +58,9 @@ function Navbar() {
               type="button"
               className="menu-icon"
               onClick={handleClick}
-              aria-label={click ? "Close navigation menu" : "Open navigation menu"}
+              aria-label={
+                click ? "Close navigation menu" : "Open navigation menu"
+              }
               aria-expanded={click}
               aria-controls="primary-nav-menu"
             >

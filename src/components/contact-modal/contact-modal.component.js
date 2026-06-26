@@ -12,6 +12,7 @@ import ContactForm from "../contact-form/contact-form.component";
 
 const ContactModal = ({ showModal, setShowModal }) => {
   const modalRef = useRef();
+  const headingId = useRef("contact-form-dialog-title");
 
   const animation = useSpring({
     config: {
@@ -33,7 +34,7 @@ const ContactModal = ({ showModal, setShowModal }) => {
         setShowModal(false);
       }
     },
-    [setShowModal, showModal]
+    [setShowModal, showModal],
   );
 
   useEffect(() => {
@@ -41,14 +42,41 @@ const ContactModal = ({ showModal, setShowModal }) => {
     return () => document.removeEventListener("keydown", keyPress);
   }, [keyPress]);
 
+  useEffect(() => {
+    if (showModal) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [showModal]);
+
   return (
     <>
       {showModal ? (
-        <BackgroundContainer onClick={closeModal} ref={modalRef}>
+        <BackgroundContainer
+          onClick={closeModal}
+          ref={modalRef}
+          role="presentation"
+        >
           <animated.div style={animation}>
-            <ModalWrapper showModal={showModal}>
-              <ModalImage src={imageLoc} alt="camera" />
+            <ModalWrapper
+              showModal={showModal}
+              role="dialog"
+              aria-modal="true"
+              aria-labelledby={headingId.current}
+            >
+              <ModalImage src={imageLoc} alt="Illustration of a camera" />
               <ModalContent>
+                <div id={headingId.current} className="sr-only">
+                  Contact form dialog
+                </div>
+                <div className="sr-only" aria-live="polite">
+                  {showModal ? "Contact form opened." : "Contact form closed."}
+                </div>
                 <ContactForm />
               </ModalContent>
               <CloseModalButton
