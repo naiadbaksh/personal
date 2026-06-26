@@ -29,20 +29,25 @@ function AppContent() {
 
   return (
     <>
+      <a className="skip-link" href="#main-content">
+        Skip to main content
+      </a>
       <Navbar />
-      <Switch>
-        <Route path="/" exact component={Home} />
-        <Route path="/about" exact component={About} />
-        <Route path="/contact" exact component={Contact} />
-        <Route
-          path="/pathfindingvisualizer"
-          exact
-          component={PathfindingProject}
-        />
-        <Route path="/ecommerce" exact component={eCommerceProject} />
-        <Route path="/aichatbot" exact component={ChatbotProject} />
-        <Route path="/thoughtgarden" exact component={ThoughtGardenProject} />
-      </Switch>
+      <main id="main-content" tabIndex="-1">
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/about" exact component={About} />
+          <Route path="/contact" exact component={Contact} />
+          <Route
+            path="/pathfindingvisualizer"
+            exact
+            component={PathfindingProject}
+          />
+          <Route path="/ecommerce" exact component={eCommerceProject} />
+          <Route path="/aichatbot" exact component={ChatbotProject} />
+          <Route path="/thoughtgarden" exact component={ThoughtGardenProject} />
+        </Switch>
+      </main>
     </>
   );
 }

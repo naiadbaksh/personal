@@ -4,3 +4,37 @@
   font-family: "AN-Bold";
   src: local("AN-Bold") url("./fonts/AvenirNext-Bold-01.ttf") format("truetype");
 }
+
+:focus {
+  outline: 3px solid #2f6fed;
+  outline-offset: 2px;
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 3px solid #2f6fed;
+  outline-offset: 2px;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: #30394d;
+  color: #ffffff;
+  padding: 0.75rem 1rem;
+  z-index: 1000;
+  text-decoration: none;
+  border-radius: 0 0 0.25rem 0.25rem;
+}
+
+.skip-link:focus {
+  left: 1rem;
+}
+
+main {
+  display: block;
+}
