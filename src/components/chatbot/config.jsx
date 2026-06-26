@@ -53,17 +53,17 @@ const config = {
         info: [
           {
             answer:
-              "After graduating from Brainstation, Naiad worked as a UX Developer for a small digital agency called CYC Labs. He worked on multiple projects where he used HMTL, CSS & Javascript to lead design and help develop websites for clients like Kia. He also worked as lead designer on mobile applications.",
+              "Over the past five years I've built full-stack applications using React, Node.js, Python, GraphQL, SQL, NoSQL, and AWS, with a focus on clean architecture, performance, and user experience.",
             id: 1,
           },
           {
             answer:
-              "After a brief interlude as a chef, he entered corporate sales at Peninsula Canada where he excelled, bringing in over $1.4M in new revenue in his first 12 months, and lead a team of 6 individuals.",
+              "I've contributed to enterprise products used by thousands of users, shipping features across the entire stack—from database design and APIs to responsive frontends and cloud deployments.",
             id: 2,
           },
           {
             answer:
-              "He continued his sales career at Michael Page, working with clients such as Ultimate Software, Wealthsimple, & Tangerine bringing in over $100K in his last 8 months. After a restructuring due to COVID, Naiad began his coding journey.",
+              "I'm passionate about solving challenging problems, learning new technologies, and building software that makes a meaningful impact. I enjoy collaborating with cross-functional teams and taking ownership from idea to production.",
             id: 3,
           },
         ],
@@ -76,12 +76,13 @@ const config = {
         info: [
           {
             answer:
-              "Naiad is very familiar with Python and React, and has used these technologies to create his projects, found in the projects section.",
+              "Naiad specializes in modern JavaScript development with React, Node.js, TypeScript, and Python. He has experience designing REST and GraphQL APIs, working with PostgreSQL and MongoDB, and deploying applications using AWS and CI/CD pipelines.",
             id: 1,
           },
           {
             answer:
-              "Naiad is also an excellent presenter, team player and can pick up new techniques and skills rapidly.",
+              "He values clean architecture, performance, accessibility, and writing maintainable code. Whether building new products or improving existing systems, he focuses on delivering reliable software that solves real problems.",
+            id: 2,
           },
         ],
       },
@@ -93,17 +94,17 @@ const config = {
         info: [
           {
             answer:
-              "Here are 3 reasons why you should interview Naiad at your organization. First, he has demonstrated a strong knowledge of product development as indicated on this website and even myself! 🙋‍♀️ He did build me after all.",
+              "First, Naiad has a proven track record of building high-quality software across the full stack. From designing APIs and databases to creating polished React applications, he enjoys taking ownership of features from concept to production. (And yes, he built me. 🙋‍♀️)",
             id: 1,
           },
           {
             answer:
-              "Secondly, he's an excellent communicator and can understand, abstract, distill and present complex ideas to others effectively. He can think critically about concepts and anticipate obstacles.",
+              "Second, he's an excellent communicator. His background in sales and consulting allows him to bridge the gap between technical and non-technical stakeholders, ask the right questions, and collaborate effectively across teams.",
             id: 2,
           },
           {
             answer:
-              "Finally, he's ferocious in his curiosity and is very teachable. He can apprehend new concepts quickly, and apply them with practice. Most of all, he's very open to learning new skills from those more knowledgeable.",
+              "Finally, Naiad is relentlessly curious. He learns new technologies quickly, embraces feedback, and enjoys tackling unfamiliar problems. He cares about writing clean, maintainable software and continuously improving as an engineer.",
             id: 3,
           },
         ],

@@ -18,8 +18,12 @@ export default function About() {
             />
             <h2>HELLO.</h2>
             <p>
-              Welcome to my webpage. I'm a self-taught software engineer from
-              Toronto. I work mainly in React and Python.
+              I'm Naiad, a full-stack software engineer based in Toronto with 5+
+              years of experience building scalable web applications. I enjoy
+              solving complex problems, designing clean user experiences, and
+              shipping products that people rely on every day. My primary stack
+              includes React, Node.js, TypeScript, Python, GraphQL, SQL, and
+              AWS.
             </p>
           </div>
           <div className="skills">
@@ -32,8 +36,10 @@ export default function About() {
               />
               <h3>Back End</h3>
               <p>
-                Python is a simple yet powerful programming language. I've used
-                Python and Django on the backend of full stack web applications.
+                I build scalable backend services using Node.js and Python,
+                designing REST and GraphQL APIs, integrating third-party
+                services, and working with SQL and NoSQL databases. I enjoy
+                creating reliable systems that are easy to maintain and evolve.
               </p>
             </div>
             <div className="skill-row">
@@ -44,9 +50,10 @@ export default function About() {
               />
               <h3>Front End</h3>
               <p>
-                React is a library developed by Facebook to create robust and
-                flexible web applications. I've used React to create some of my
-                web apps.
+                React is where I spend most of my time. I build fast,
+                responsive, and accessible interfaces with a focus on clean
+                architecture, reusable components, and delivering a great user
+                experience across devices.
               </p>
             </div>
           </div>
