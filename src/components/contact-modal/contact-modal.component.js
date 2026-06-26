@@ -77,7 +77,7 @@ const ContactModal = ({ showModal, setShowModal }) => {
                 <div className="sr-only" aria-live="polite">
                   {showModal ? "Contact form opened." : "Contact form closed."}
                 </div>
-                <ContactForm />
+                <ContactForm onSubmitSuccess={() => setShowModal(false)} />
               </ModalContent>
               <CloseModalButton
                 className="close-modal"
