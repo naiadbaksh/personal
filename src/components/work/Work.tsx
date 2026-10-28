@@ -64,9 +64,21 @@ export default function Work() {
               >
                 <div className="min-h-0 overflow-hidden">
                   <div className="flex flex-col gap-3.5 px-5 pt-1 pb-5 text-[13px]">
-                    <div className="flex aspect-video items-center justify-center rounded-[2px] bg-panel text-soft">
-                      [PLACEHOLDER: screenshot]
-                    </div>
+                    {p.shot ? (
+                      <img
+                        src={p.shot.src}
+                        width={p.shot.width}
+                        height={p.shot.height}
+                        alt={p.shot.alt}
+                        loading="lazy"
+                        decoding="async"
+                        className="h-auto w-full rounded-[2px] border border-line bg-panel"
+                      />
+                    ) : (
+                      <div className="flex aspect-video items-center justify-center rounded-[2px] bg-panel text-soft">
+                        [PLACEHOLDER: screenshot]
+                      </div>
+                    )}
                     <dl className="grid grid-cols-[max-content_minmax(0,1fr)] gap-x-4 gap-y-1.5 border-t border-dashed border-line pt-3">
                       <dt className="font-bold">Problem</dt>
                       <dd className="text-soft">{p.problem}</dd>
