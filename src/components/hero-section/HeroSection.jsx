@@ -1,25 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "../../App.css";
 import "./HeroSection.css";
 import Typical from "react-typical";
-import ChatBot from "../chatbot/chatbot.component";
 
 function HeroSection() {
-  const [showChatBot, setShowChatBot] = useState(false);
-  const toggleChatBot = () => {
-    if (window.innerWidth > 768) {
-      setShowChatBot((prev) => !prev);
-    }
-  };
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      if (window.innerWidth > 768) {
-        setShowChatBot(true);
-      }
-    }, 6500);
-    return () => clearTimeout(timer);
-  }, []);
-
   return (
     <>
       <div className="hero-container">
@@ -42,24 +26,6 @@ function HeroSection() {
               ]}
             />
           </div>
-          {showChatBot ? (
-            <div className="chatbot-wrapper">
-              <button
-                type="button"
-                className="chatbot-close-button"
-                onClick={() => setShowChatBot(false)}
-                aria-label="Close chatbot"
-              >
-                ×
-              </button>
-              <ChatBot className="main-chatbot" showChatBot={showChatBot} />
-            </div>
-          ) : null}
-          <button
-            className="chatbot-button"
-            onClick={toggleChatBot}
-            aria-label="Toggle chatbot"
-          ></button>
         </div>
       </div>
     </>
