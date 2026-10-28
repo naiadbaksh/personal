@@ -3,6 +3,7 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
+  Navigate,
   useNavigate,
 } from "react-router-dom";
 import HomePage from "./components/pages/HomePage";
@@ -12,8 +13,6 @@ import NotFoundPage from "./components/pages/NotFoundPage";
 // The old pages load on demand, all in one chunk with their CSS (see legacy/LegacyLayout.jsx).
 const legacy = () => import("./legacy/LegacyLayout");
 const LegacyLayout = lazy(legacy);
-const About = lazy(() => legacy().then((m) => ({ default: m.About })));
-const Contact = lazy(() => legacy().then((m) => ({ default: m.Contact })));
 const ChatbotProject = lazy(() => legacy().then((m) => ({ default: m.ChatbotProject })));
 
 function AppContent() {
@@ -41,6 +40,9 @@ function AppContent() {
           path="/pathfindingvisualizer"
           element={<CaseStudyPage slug="pathfindingvisualizer" />}
         />
+        {/* The old About and Contact pages are now sections of the home page. */}
+        <Route path="/about" element={<Navigate to="/#about" replace />} />
+        <Route path="/contact" element={<Navigate to="/#contact" replace />} />
         <Route
           element={
             <Suspense fallback={null}>
@@ -48,8 +50,6 @@ function AppContent() {
             </Suspense>
           }
         >
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
           <Route path="/aichatbot" element={<ChatbotProject />} />
         </Route>
         <Route path="*" element={<NotFoundPage />} />
