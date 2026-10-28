@@ -104,6 +104,20 @@ the problem, the architecture (keep the existing diagrams and folder-structure i
 code decisions and tradeoffs, what he'd do differently, live demo and repo links.
 Verify every demo link works; flag dead ones to Naiad.
 
+Status: **done 2026-10-28, with placeholders.** `pages/CaseStudyPage.tsx` renders all three
+from `src/content/projects.ts` (the home tickets read the same file). Notes:
+
+- Links checked, all HTTP 200: eCommerce demo `jovial-wozniak-c11748.netlify.app`, Pathfinding
+  demo `naiadbaksh.github.io/pathfinding`, Thought Garden YouTube demo `ASBGLWwAu1I`, and the
+  repos `naiadbaksh/thought-garden`, `/eCommerce`, `/pathfinding`. Thought Garden has no live
+  app (the old page's commented-out link was a Netlify preview of the eCommerce site).
+- Text is from the old pages, shortened. Alt text was written from the images themselves.
+- `[PLACEHOLDER]`: "who it is for" under The problem, Decisions and tradeoffs, and What I'd do
+  differently, on all three pages. Naiad writes these.
+- Images are WebP copies in `src/images/web/` (max 1440px, q85; 8.4 MB -> 0.96 MB).
+- Still legacy: `/about`, `/contact`, `/aichatbot` and their CSS, Font Awesome, and the old
+  Google Fonts in `index.html`. The old case-study components are no longer routed.
+
 ## Phase 5 — Content and polish
 
 1. Real Experience entries and the résumé PDF (from Naiad's résumé).
