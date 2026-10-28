@@ -61,7 +61,10 @@ Setup (done 2026-10-28):
 - The old pages render inside `LegacyLayout` (`<div class="legacy">` in `App.jsx`), and their
   22 global CSS rules (`*`, `h1`–`h3`, `p`, `main`, `:focus`) are scoped with
   `:where(.legacy)`, so they cannot reach the new markup. Removing them instead would have
-  broken the old case-study pages, which stay until Phase 4. Delete the old CSS with them.
+  broken the old case-study pages, which stay until Phase 4. Delete the old CSS with them,
+  and the Font Awesome CDN stylesheet in `index.html` (its unlayered `.sr-only` beats
+  Tailwind's `focus:not-sr-only`; until then, don't use `sr-only` on anything that must
+  appear on focus).
 - `/` renders the new `HomePage.tsx` outside `.legacy`. The old `Home.jsx`, `HeroSection`,
   `Cards` and `Footer` are no longer rendered.
 - Preflight is on, plus the base rules deferred from Phase 2 (`body` colours, font, size,
