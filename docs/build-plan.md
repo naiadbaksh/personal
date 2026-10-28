@@ -36,21 +36,30 @@ how the 404.html trick makes client-side routes work on GitHub Pages.
 
 ## Phase 2 — Foundations of the new design
 
-1. Self-host JetBrains Mono (woff2 in `src/fonts/`), `font-display: swap`.
-2. Create the colour tokens from `docs/direction.md` as CSS custom properties on `:root`, with
-   `[data-theme="dark"]` and a `prefers-color-scheme: dark` default.
-3. Theme toggle: reads system preference, stores the choice in `localStorage` (wrapped in
+1. Install Tailwind CSS v4 (`tailwindcss`, `@tailwindcss/vite`) and add the plugin to
+   `vite.config.mjs`. Load only the theme and utilities layers for now, without Preflight, so
+   the old UI keeps its look until Phase 3 replaces it.
+2. Self-host JetBrains Mono (woff2 in `src/fonts/`), `font-display: swap`. Register it as
+   `--font-mono` in `@theme`.
+3. Create the colour tokens from `docs/direction.md` as CSS custom properties on `:root`, with
+   `[data-theme="dark"]` and a `prefers-color-scheme: dark` default. Map them into Tailwind
+   with `@theme inline` (`--color-ink: var(--ink)`), so utilities like `text-ink` and
+   `bg-panel` follow the theme without `dark:` variants.
+4. Theme toggle: reads system preference, stores the choice in `localStorage` (wrapped in
    try/catch), sets `data-theme` on `<html>`.
-4. Base styles: body type, links, selection, focus rings, reduced-motion media query.
-5. **Check:** toggle works, contrast passes in both themes (use browser devtools).
+5. Base styles in `@layer base`: body type, links, selection, focus rings, reduced-motion
+   media query.
+6. **Check:** toggle works, contrast passes in both themes (use browser devtools).
 
-Decide with Naiad: plain CSS modules vs keeping styled-components. Recommendation: CSS modules
-plus the custom properties. Fewer dependencies and easy to explain.
+Decided with Naiad (2026-10-28): Tailwind CSS v4 instead of CSS modules or styled-components.
+The old styled-components files stay until Phase 3 replaces them.
 
 ## Phase 3 — Home page
 
-Build in this order, one commit each: Nav → Intro (with photo ticket) → Rail + Project
-tickets (expand/collapse) → About → Experience → Footer → motion.
+First, switch to the full `@import "tailwindcss"` so Preflight (Tailwind's CSS reset) is on.
+
+Build in this order, one commit each, styled with Tailwind utilities: Nav → Intro (with photo
+ticket) → Rail + Project tickets (expand/collapse) → About → Experience → Footer → motion.
 
 **Check after each:** looks right at 375px and 1280px; keyboard can reach and operate
 everything; no console errors.

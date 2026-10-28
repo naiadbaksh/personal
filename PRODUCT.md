@@ -49,6 +49,8 @@ Every demo link must be checked before launch; several point at old Netlify URLs
 ## Settled decisions
 
 - Rebuild on Vite + React + TypeScript (Create React App is unmaintained).
+- Style with Tailwind CSS v4 (CSS-first config via `@theme`, `@tailwindcss/vite` plugin).
+  Chosen on 2026-10-28 over CSS modules and styled-components.
 - Stay on GitHub Pages with the naiadbaksh.com domain.
 - Light and dark themes, following the system setting, with a manual toggle.
 - Keep the NB monogram. Drop the purple-blue gradient and stock laptop art.

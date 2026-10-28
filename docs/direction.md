@@ -35,6 +35,12 @@ same-size cards) in favour of calm, receipt-like restraint. Influence: caweidman
 
 Selection: accent background, white text. Focus ring: 2px solid accent, 3px offset.
 
+**In code (Tailwind CSS v4):** each token is a CSS custom property in kebab-case (`--ink`,
+`--accent-text`, `--status`) on `:root`, switched by `[data-theme="dark"]` and
+`prefers-color-scheme`. `@theme inline` maps each one to a Tailwind colour
+(`--color-ink: var(--ink)`), so `text-ink`, `bg-panel`, `border-line` and `text-accent-text`
+follow the theme with no `dark:` variants. The typeface is `--font-mono`.
+
 ## Components
 
 - **Nav:** `NB` pill (panel background) then Work / About / Experience / Contact separated by
