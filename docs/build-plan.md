@@ -58,9 +58,15 @@ The old styled-components files stay until Phase 3 replaces them.
 
 First, switch to the full `@import "tailwindcss"` so Preflight (Tailwind's CSS reset) is on.
 Also remove the old global CSS: `App.css` has `* { margin: 0; padding: 0; }`, and unlayered
-rules like it beat Tailwind's spacing utilities. Then move `ThemeToggle` from its temporary
+rules like it beat Tailwind's spacing utilities; `index.css` has a blue `:focus-visible` ring
+that hides the new accent focus ring. Then move `ThemeToggle` from its temporary
 spot in `App.jsx` into the new nav. (Home and About render a second old `Navbar`; the new
 nav must render once.)
+Then add the base rules deferred from Phase 2: in `@layer base`, `body { background-color:
+var(--bg); color: var(--ink); font-family: var(--font-mono); font-size: 15px; line-height:
+1.75; }`, and `color-scheme: light` / `dark` in the token blocks. (In Phase 2 they made the
+old pages unreadable in dark mode. The old case-study pages will look wrong in dark mode
+from here until Phase 4 rebuilds them; the branch is not deployed, so that is accepted.)
 
 Build in this order, one commit each, styled with Tailwind utilities: Nav → Intro (with photo
 ticket) → Rail + Project tickets (expand/collapse) → About → Experience → Footer → motion.

@@ -82,3 +82,39 @@
   --color-accent-text: var(--accent-text);
   --color-status: var(--status);
 }
+
+/* Base styles from docs/direction.md. Layered, so the old unlayered CSS still wins where it
+   sets the same property. The body rules and color-scheme wait for Phase 3 (see the build
+   plan): they make the old pages unreadable in dark mode. */
+@layer base {
+  a {
+    color: inherit;
+    text-decoration-thickness: 1.5px;
+    text-underline-offset: 4px;
+  }
+
+  a:hover {
+    color: var(--accent);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+  }
+
+  ::selection {
+    background-color: var(--accent);
+    color: var(--on-accent);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
