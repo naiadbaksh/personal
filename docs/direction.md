@@ -29,11 +29,17 @@ same-size cards) in favour of calm, receipt-like restraint. Influence: caweidman
 | `paper`      | `#FFFFFF` | `#1A1D20` | ticket surface                        |
 | `line`       | `#D6D9DC` | `#3A4046` | dashed rules, outlines                |
 | `rail`       | `#A9B0B7` | `#6E767E` | rail and ticket clips                 |
-| `accent`     | `#D9480F` | `#FF6B33` | "Software Engineer", hover, focus     |
+| `accent`     | `#C7420E` | `#FF6B33` | "Software Engineer", hover, focus     |
+| `onAccent`   | `#FFFFFF` | `#121416` | text on an accent background          |
 | `accentText` | `#1F6F66` | `#7FD3C4` | project summaries, company names      |
 | status dot   | `#22A06B` | `#22A06B` | availability indicator                |
 
-Selection: accent background, white text. Focus ring: 2px solid accent, 3px offset.
+Selection: accent background, `onAccent` text. Focus ring: 2px solid accent, 3px offset.
+
+Contrast fix (2026-10-28, approved by Naiad): the light accent was `#D9480F`, which gave only
+4.30:1 as hover text on white and as the background of white selection text. `#C7420E` keeps
+the hue and gives 4.98:1 on `bg`, 4.53:1 on `panel`. In dark, white on `#FF6B33` was 2.84:1,
+so selection text uses `onAccent` (`#121416`, 6.51:1).
 
 **In code (Tailwind CSS v4):** each token is a CSS custom property in kebab-case (`--ink`,
 `--accent-text`, `--status`) on `:root`, switched by `[data-theme="dark"]` and

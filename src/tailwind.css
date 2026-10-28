@@ -31,7 +31,8 @@
   --paper: #ffffff;
   --line: #d6d9dc;
   --rail: #a9b0b7;
-  --accent: #d9480f;
+  --accent: #c7420e;
+  --on-accent: #ffffff;
   --accent-text: #1f6f66;
   --status: #22a06b;
 }
@@ -47,6 +48,7 @@
     --line: #3a4046;
     --rail: #6e767e;
     --accent: #ff6b33;
+    --on-accent: #121416;
     --accent-text: #7fd3c4;
   }
 }
@@ -61,6 +63,7 @@
   --line: #3a4046;
   --rail: #6e767e;
   --accent: #ff6b33;
+  --on-accent: #121416;
   --accent-text: #7fd3c4;
 }
 
@@ -75,6 +78,7 @@
   --color-line: var(--line);
   --color-rail: var(--rail);
   --color-accent: var(--accent);
+  --color-on-accent: var(--on-accent);
   --color-accent-text: var(--accent-text);
   --color-status: var(--status);
 }
