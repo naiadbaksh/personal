@@ -2,7 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="/favicon.ico" />
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -10,12 +11,20 @@
       rel="stylesheet"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#121416" media="(prefers-color-scheme: dark)" />
     <meta
       name="description"
-      content="Naiad is a software engineer from Toronto."
+      content="Full-stack engineer in Toronto building fast, thoughtful React and Node apps, from database and API to the last pixel."
     />
-    <link rel="apple-touch-icon" href="/logo192.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Naiad Baksh | Software Engineer" />
+    <meta
+      property="og:description"
+      content="Full-stack engineer in Toronto building fast, thoughtful React and Node apps, from database and API to the last pixel."
+    />
+    <!-- [PLACEHOLDER] og:image: a 1200x630 share image is still to be designed. -->
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <!-- Font awesome CDN -->
     <link
       rel="stylesheet"
@@ -32,7 +41,7 @@
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
     <link rel="manifest" href="/manifest.json" />
-    <title>Naiad | Software Engineer</title>
+    <title>Naiad Baksh | Software Engineer</title>
     <!-- Apply the saved theme before the first paint, so the page never flashes the wrong one. -->
     <script>
       try {

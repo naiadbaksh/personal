@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <!-- The NB monogram (from src/components/graphics/nbLogoBlue.svg) on a panel-coloured tile.
+       Colours are the site tokens: panel + ink, swapped for dark mode. -->
+  <style>
+    .tile { fill: #f3f4f5; }
+    .mark { fill: #16191c; stroke: #16191c; }
+    @media (prefers-color-scheme: dark) {
+      .tile { fill: #1e2124; }
+      .mark { fill: #eceef0; stroke: #eceef0; }
+    }
+  </style>
+  <rect class="tile" width="128" height="128" rx="28" />
+  <g class="mark" transform="translate(13 21.5)">
+    <polygon points="11 34 10 81 0 81 0 83 31 83 31 81 20 81 20 50" />
+    <polygon points="58 83 11 2 1 2 1 0 22 0 58 63" />
+    <path d="M37,2 L37,0 L90,0 C94.67,2.67 97.33,5.67 98,9 L98,23 C96.67,27.67 94,30.67 90,32 L82,32 C85.33,28.67 87,26 87,24 L87,9 C85,5 82.67,3 80,3 C66,3 59,3 59,3 C59,13 59,18 59,18 L48,2 L37,2 Z" />
+    <path d="M71,36 C85.67,36 93,36 93,36 C99,38.67 102,42.33 102,47 C102,65.67 102,75 102,75 C99.33,80.33 95.67,83 91,83 C86.33,83 83.67,83 83,83 C86.33,81 88.33,77 89,71 C90,62 89,48 89,48 C89,44 87.33,41.33 84,40 L71,40 L71,36 Z" />
+  </g>
+</svg>

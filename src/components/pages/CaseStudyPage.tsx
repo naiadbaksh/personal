@@ -48,7 +48,7 @@ export default function CaseStudyPage({ slug }: { slug: string }) {
     window.scrollTo(0, 0);
     document.title = `${project.title} | Naiad Baksh`;
     return () => {
-      document.title = "Naiad | Software Engineer";
+      document.title = "Naiad Baksh | Software Engineer";
     };
   }, [project]);
 
