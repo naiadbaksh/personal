@@ -1,33 +1,19 @@
-import React, { useEffect } from "react";
-import Navbar from "./components/navbar/Navbar";
+import React, { Suspense, lazy, useEffect } from "react";
 import {
   BrowserRouter as Router,
   Routes,
   Route,
-  Outlet,
   useNavigate,
 } from "react-router-dom";
-import "./App.css";
 import HomePage from "./components/pages/HomePage";
-import About from "./components/pages/About";
-import Contact from "./components/pages/Contact";
-import ChatbotProject from "./components/pages/Chatbot";
 import CaseStudyPage from "./components/pages/CaseStudyPage";
 
-// The old site, kept until the rebuild replaces each page. Its global CSS is scoped to .legacy.
-function LegacyLayout() {
-  return (
-    <div className="legacy">
-      <a className="skip-link" href="#main-content">
-        Skip to main content
-      </a>
-      <Navbar />
-      <main id="main-content" tabIndex="-1">
-        <Outlet />
-      </main>
-    </div>
-  );
-}
+// The old pages load on demand, all in one chunk with their CSS (see legacy/LegacyLayout.jsx).
+const legacy = () => import("./legacy/LegacyLayout");
+const LegacyLayout = lazy(legacy);
+const About = lazy(() => legacy().then((m) => ({ default: m.About })));
+const Contact = lazy(() => legacy().then((m) => ({ default: m.Contact })));
+const ChatbotProject = lazy(() => legacy().then((m) => ({ default: m.ChatbotProject })));
 
 function AppContent() {
   const navigate = useNavigate();
@@ -54,7 +40,13 @@ function AppContent() {
           path="/pathfindingvisualizer"
           element={<CaseStudyPage slug="pathfindingvisualizer" />}
         />
-        <Route element={<LegacyLayout />}>
+        <Route
+          element={
+            <Suspense fallback={null}>
+              <LegacyLayout />
+            </Suspense>
+          }
+        >
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/aichatbot" element={<ChatbotProject />} />
