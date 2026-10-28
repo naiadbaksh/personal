@@ -134,16 +134,26 @@ Status (2026-10-28, partly done):
 1. Experience: **done** from the résumé. PDF: **waiting** — the file in `public/` still has
    the phone number, so it is untracked; Naiad replaces it, then it is checked and committed.
 2. Screenshots/clips: the case-study images are compressed WebP and lazy-loaded. The home
-   tickets still show `[PLACEHOLDER: screenshot]`. Option: `srcset` with 720px copies would
-   save ~130–160 KB on phones.
-3. Meta: **done** except `og:image` (placeholder comment in `index.html`). Favicon and app
-   icons are the NB monogram (`public/favicon.svg`, light and dark).
+   tickets show each project's `shot` (**done**): eCommerce and Pathfinding reuse their
+   case-study image; Thought Garden uses YouTube's `sd1.jpg` frame of the demo (Naiad's
+   choice; it shows third-party podcast art), cropped to 16:9 by `object-cover`. Option:
+   `srcset` with 720px copies would save ~130–160 KB on phones.
+3. Meta: **done**. Favicon and app icons are the NB monogram (`public/favicon.svg`, light and
+   dark). `public/og-image.png` (1200×630) was rendered with headless Chrome from an HTML
+   file in the light tokens; link previews work only after deploy (absolute URL).
 4. Not run: the Vercel guidelines and Impeccable skills are not installed. Instead, axe-core
    (WCAG 2.2 AA + best practice): 0 violations on `/` and the three case studies, both themes.
 5. Lighthouse (mobile, `vite preview`): `/` 99/100/100/100; `/thoughtgarden` 98/100/96/100
    (the 96 is the YouTube embed); `/ecommerce` 98/100/100/100. The old pages now load lazily
    from `src/legacy/LegacyLayout.jsx` with their CSS and external fonts, which removed ~1 s of
    render-blocking CSS from every page.
+
+Also done (2026-10-28, second session, decided with Naiad): unknown paths show
+`NotFoundPage.tsx`; `/about` and `/contact` redirect to `/#about` and `/#contact` (`HomePage`
+scrolls to the `#hash` on mount); opening a case study sets the URL to `/#<slug>` first, so
+"back" returns to that ticket, open. `/aichatbot` is still the old page. Remaining: the
+résumé PDF (still has the phone number), the case-study placeholders, a re-run of
+Lighthouse, and Naiad's review on phone and laptop.
 
 ## Phase 6 — Ship
 
