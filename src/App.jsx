@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import HomePage from "./components/pages/HomePage";
 import CaseStudyPage from "./components/pages/CaseStudyPage";
+import NotFoundPage from "./components/pages/NotFoundPage";
 
 // The old pages load on demand, all in one chunk with their CSS (see legacy/LegacyLayout.jsx).
 const legacy = () => import("./legacy/LegacyLayout");
@@ -51,6 +52,7 @@ function AppContent() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/aichatbot" element={<ChatbotProject />} />
         </Route>
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </>
   );
