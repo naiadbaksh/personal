@@ -1,5 +1,6 @@
 import SiteHeader from "../site-header/SiteHeader";
 import Intro from "../intro/Intro";
+import Work from "../work/Work";
 
 export default function HomePage() {
   return (
@@ -11,6 +12,7 @@ export default function HomePage() {
         className="mx-auto flex max-w-[768px] flex-col gap-[88px] px-6 pt-12 pb-24"
       >
         <Intro />
+        <Work />
       </main>
     </>
   );

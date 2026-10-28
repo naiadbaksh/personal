@@ -79,8 +79,8 @@ new nav. (Home and About render a second old `Navbar`; the new nav must render o
 Build in this order, one commit each, styled with Tailwind utilities: Nav → Intro (with photo
 ticket) → Rail + Project tickets (expand/collapse) → About → Experience → Footer → motion.
 
-Note: the self-hosted JetBrains Mono subset has no `→` (U+2192), so "Read the case study →"
-falls back to the system monospace font. Decide then: an inline SVG arrow, or accept it.
+Note: the self-hosted JetBrains Mono subset has no `→` (U+2192). Decided: "Read the case
+study" uses an inline SVG arrow (`aria-hidden`), not the glyph.
 
 **Check after each:** looks right at 375px and 1280px; keyboard can reach and operate
 everything; no console errors.
