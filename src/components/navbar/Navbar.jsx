@@ -72,10 +72,11 @@ function Navbar() {
             >
               <li className="nav-item">
                 <NavLink
-                  exact
+                  end
                   to="/"
-                  className="nav-links"
-                  activeClassName={"selected"}
+                  className={({ isActive }) =>
+                    isActive ? "nav-links selected" : "nav-links"
+                  }
                   onClick={closeMobileMenu}
                 >
                   Home
@@ -83,10 +84,11 @@ function Navbar() {
               </li>
               <li className="nav-item">
                 <NavLink
-                  exact
+                  end
                   to="/about"
-                  className="nav-links"
-                  activeClassName={"selected"}
+                  className={({ isActive }) =>
+                    isActive ? "nav-links selected" : "nav-links"
+                  }
                   onClick={closeMobileMenu}
                 >
                   About
@@ -99,7 +101,7 @@ function Navbar() {
                  </li>  */}
               <li className="nav-item">
                 <NavLink
-                  exact
+                  end
                   to="/"
                   className="nav-links-mobile"
                   onClick={(closeMobileMenu, openModal)}

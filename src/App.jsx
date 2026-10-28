@@ -2,30 +2,30 @@ import React, { useEffect } from "react";
 import Navbar from "./components/navbar/Navbar";
 import {
   BrowserRouter as Router,
-  Switch,
+  Routes,
   Route,
-  useHistory,
+  useNavigate,
 } from "react-router-dom";
 import "./App.css";
 import Home from "./components/pages/Home";
 import About from "./components/pages/About";
 import Contact from "./components/pages/Contact";
 import PathfindingProject from "./components/pages/PathfinderProject";
-import eCommerceProject from "./components/pages/eCommerceProject";
+import ECommerceProject from "./components/pages/eCommerceProject";
 import ChatbotProject from "./components/pages/Chatbot";
 import ThoughtGardenProject from "./components/pages/ThoughtGardenProject";
 
 function AppContent() {
-  const history = useHistory();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const redirect = params.get("redirect");
 
     if (redirect) {
-      history.replace(decodeURIComponent(redirect));
+      navigate(decodeURIComponent(redirect), { replace: true });
     }
-  }, [history]);
+  }, [navigate]);
 
   return (
     <>
@@ -34,19 +34,18 @@ function AppContent() {
       </a>
       <Navbar />
       <main id="main-content" tabIndex="-1">
-        <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/about" exact component={About} />
-          <Route path="/contact" exact component={Contact} />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
           <Route
             path="/pathfindingvisualizer"
-            exact
-            component={PathfindingProject}
+            element={<PathfindingProject />}
           />
-          <Route path="/ecommerce" exact component={eCommerceProject} />
-          <Route path="/aichatbot" exact component={ChatbotProject} />
-          <Route path="/thoughtgarden" exact component={ThoughtGardenProject} />
-        </Switch>
+          <Route path="/ecommerce" element={<ECommerceProject />} />
+          <Route path="/aichatbot" element={<ChatbotProject />} />
+          <Route path="/thoughtgarden" element={<ThoughtGardenProject />} />
+        </Routes>
       </main>
     </>
   );
