@@ -11,10 +11,8 @@ import "./App.css";
 import HomePage from "./components/pages/HomePage";
 import About from "./components/pages/About";
 import Contact from "./components/pages/Contact";
-import PathfindingProject from "./components/pages/PathfinderProject";
-import ECommerceProject from "./components/pages/eCommerceProject";
 import ChatbotProject from "./components/pages/Chatbot";
-import ThoughtGardenProject from "./components/pages/ThoughtGardenProject";
+import CaseStudyPage from "./components/pages/CaseStudyPage";
 
 // The old site, kept until the rebuild replaces each page. Its global CSS is scoped to .legacy.
 function LegacyLayout() {
@@ -47,16 +45,19 @@ function AppContent() {
     <>
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route
+          path="/thoughtgarden"
+          element={<CaseStudyPage slug="thoughtgarden" />}
+        />
+        <Route path="/ecommerce" element={<CaseStudyPage slug="ecommerce" />} />
+        <Route
+          path="/pathfindingvisualizer"
+          element={<CaseStudyPage slug="pathfindingvisualizer" />}
+        />
         <Route element={<LegacyLayout />}>
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
-          <Route
-            path="/pathfindingvisualizer"
-            element={<PathfindingProject />}
-          />
-          <Route path="/ecommerce" element={<ECommerceProject />} />
           <Route path="/aichatbot" element={<ChatbotProject />} />
-          <Route path="/thoughtgarden" element={<ThoughtGardenProject />} />
         </Route>
       </Routes>
     </>
