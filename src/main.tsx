@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { createRoot } from "react-dom/client";
 import App from "./App";
 import "./index.css";
 import "./fonts/AvenirNext-Bold-01.ttf";
@@ -15,4 +15,4 @@ import "./fonts/AvenirNext-Regular-08.ttf";
 import "./fonts/AvenirNext-UltraLight-11.ttf";
 import "./fonts/AvenirNext-UltraLightItalic-12.ttf";
 
-ReactDOM.render(<App />, document.getElementById("root"));
+createRoot(document.getElementById("root")!).render(<App />);
