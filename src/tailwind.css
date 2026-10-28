@@ -1,8 +1,4 @@
-/* Tailwind without Preflight (its CSS reset), so the old UI keeps its look.
-   Phase 3 replaces these imports with @import "tailwindcss"; */
-@layer theme, base, components, utilities;
-@import "tailwindcss/theme.css" layer(theme);
-@import "tailwindcss/utilities.css" layer(utilities);
+@import "tailwindcss";
 
 /* JetBrains Mono, self-hosted variable font (latin subset). License: fonts/JetBrainsMono-OFL.txt */
 @font-face {
@@ -35,6 +31,7 @@
   --on-accent: #ffffff;
   --accent-text: #1f6f66;
   --status: #22a06b;
+  color-scheme: light;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -50,6 +47,7 @@
     --accent: #ff6b33;
     --on-accent: #121416;
     --accent-text: #7fd3c4;
+    color-scheme: dark;
   }
 }
 
@@ -65,6 +63,7 @@
   --accent: #ff6b33;
   --on-accent: #121416;
   --accent-text: #7fd3c4;
+  color-scheme: dark;
 }
 
 /* Expose the tokens as Tailwind colours: text-ink, bg-panel, border-line, ... */
@@ -84,9 +83,16 @@
 }
 
 /* Base styles from docs/direction.md. Layered, so the old unlayered CSS still wins where it
-   sets the same property. The body rules and color-scheme wait for Phase 3 (see the build
-   plan): they make the old pages unreadable in dark mode. */
+   sets the same property. */
 @layer base {
+  body {
+    background-color: var(--bg);
+    color: var(--ink);
+    font-family: var(--font-mono);
+    font-size: 15px;
+    line-height: 1.75;
+  }
+
   a {
     color: inherit;
     text-decoration-thickness: 1.5px;
