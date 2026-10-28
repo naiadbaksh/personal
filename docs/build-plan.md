@@ -117,7 +117,8 @@ from `src/content/projects.ts` (the home tickets read the same file). Notes:
   differently, on all three pages. Naiad writes these.
 - Images are WebP copies in `src/images/web/` (max 1440px, q85; 8.4 MB -> 0.96 MB).
 - Still legacy: `/about`, `/contact`, `/aichatbot` and their CSS, Font Awesome, and the old
-  Google Fonts in `index.html`. The old case-study components are no longer routed.
+  Google Fonts (now loaded lazily by `src/legacy/LegacyLayout.jsx`, see Phase 5). The old
+  case-study components are no longer routed.
 
 ## Phase 5 — Content and polish
 
@@ -127,6 +128,22 @@ from `src/content/projects.ts` (the home tickets read the same file). Notes:
 4. Run the Vercel Web Interface Guidelines review and an Impeccable `audit` + `polish` pass.
 5. Lighthouse: aim for ≥ 95 on performance, accessibility, best practices and SEO.
 6. **Check:** Naiad reviews the full site on his phone and laptop.
+
+Status (2026-10-28, partly done):
+
+1. Experience: **done** from the résumé. PDF: **waiting** — the file in `public/` still has
+   the phone number, so it is untracked; Naiad replaces it, then it is checked and committed.
+2. Screenshots/clips: the case-study images are compressed WebP and lazy-loaded. The home
+   tickets still show `[PLACEHOLDER: screenshot]`. Option: `srcset` with 720px copies would
+   save ~130–160 KB on phones.
+3. Meta: **done** except `og:image` (placeholder comment in `index.html`). Favicon and app
+   icons are the NB monogram (`public/favicon.svg`, light and dark).
+4. Not run: the Vercel guidelines and Impeccable skills are not installed. Instead, axe-core
+   (WCAG 2.2 AA + best practice): 0 violations on `/` and the three case studies, both themes.
+5. Lighthouse (mobile, `vite preview`): `/` 99/100/100/100; `/thoughtgarden` 98/100/96/100
+   (the 96 is the YouTube embed); `/ecommerce` 98/100/100/100. The old pages now load lazily
+   from `src/legacy/LegacyLayout.jsx` with their CSS and external fonts, which removed ~1 s of
+   render-blocking CSS from every page.
 
 ## Phase 6 — Ship
 
