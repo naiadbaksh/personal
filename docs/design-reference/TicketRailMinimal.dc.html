@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Ticket Rail, minimal</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:inherit;text-decoration-thickness:1.5px;text-underline-offset:4px}
+a:hover{color:#E8501A}
+a:focus-visible,button:focus-visible{outline:2px solid #E8501A;outline-offset:3px;border-radius:6px}
+::selection{background:#E8501A;color:#FFFFFF}
+@keyframes trm-drop{0%{opacity:0;transform:translateY(-28px) rotate(var(--tilt-from))}100%{opacity:1;transform:translateY(0) rotate(var(--tilt))}}
+@keyframes trm-rise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+@keyframes trm-rail{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+.trm-rise{animation:trm-rise .8s cubic-bezier(.16,1,.3,1) both}
+.trm-rail{transform-origin:left center;animation:trm-rail 1s cubic-bezier(.16,1,.3,1) both}
+.trm-ticket{transform-origin:50% 0;animation:trm-drop .9s cubic-bezier(.16,1,.3,1) both;transition:transform .45s cubic-bezier(.16,1,.3,1),box-shadow .45s cubic-bezier(.16,1,.3,1)}
+.trm-ticket:hover{transform:rotate(0deg)!important;box-shadow:0 18px 34px -16px rgba(20,23,26,.28)}
+.trm-body{display:grid;transition:grid-template-rows .5s cubic-bezier(.16,1,.3,1),opacity .4s ease}
+.trm-chev{transition:transform .4s cubic-bezier(.16,1,.3,1)}
+.trm-row{transition:background-color .3s ease}
+@media (prefers-reduced-motion:reduce){.trm-rise,.trm-rail,.trm-ticket{animation:none}.trm-ticket,.trm-body,.trm-chev{transition:none}}
+</style>
+</helmet>
+<div style="background: {{t.bg}}; color: {{t.ink}}; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 15px; line-height: 1.75; min-height: 100%; transition: background-color .4s ease, color .4s ease">
+
+<header style="max-width: 720px; margin: 0 auto; padding: 20px 24px; display: flex; flex-wrap: wrap; gap: 16px; align-items: center; justify-content: space-between; font-size: 13px">
+  <nav aria-label="Main" style="display: flex; flex-wrap: wrap; gap: 6px; align-items: center">
+    <a href="#top" style="text-decoration: none; font-weight: 800; padding: 4px 10px; border-radius: 999px; background: {{t.panel}}">NB</a>
+    <span aria-hidden="true" style="color: {{t.faint}}">/</span>
+    <a href="#work" style="text-decoration: none; padding: 4px 8px">Work</a>
+    <span aria-hidden="true" style="color: {{t.faint}}">/</span>
+    <a href="#about" style="text-decoration: none; padding: 4px 8px">About</a>
+    <span aria-hidden="true" style="color: {{t.faint}}">/</span>
+    <a href="#experience" style="text-decoration: none; padding: 4px 8px">Experience</a>
+    <span aria-hidden="true" style="color: {{t.faint}}">/</span>
+    <a href="#contact" style="text-decoration: none; padding: 4px 8px">Contact</a>
+  </nav>
+  <button type="button" onClick="{{toggleTheme}}" aria-label="{{themeLabel}}" style="width: 44px; height: 44px; border-radius: 999px; border: 1px solid {{t.line}}; background: transparent; color: {{t.ink}}; display: flex; align-items: center; justify-content: center; cursor: pointer">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="8"></circle><path d="M12 4a8 8 0 0 1 0 16z" fill="currentColor"></path></svg>
+  </button>
+</header>
+
+<main style="max-width: 720px; margin: 0 auto; padding: 48px 24px 96px; display: flex; flex-direction: column; gap: 88px">
+
+  <section id="top" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 40px; align-items: start">
+    <div style="display: flex; flex-direction: column; gap: 20px">
+      <h1 class="trm-rise" style="margin: 0; font-size: 34px; font-weight: 800; line-height: 1.15; letter-spacing: -0.02em">Naiad Baksh<span style="display: block; color: {{t.accent}}">Software Engineer</span></h1>
+      <p class="trm-rise" style="margin: 0; color: {{t.soft}}; animation-delay: .08s">Full-stack engineer in Toronto building fast, thoughtful React and Node apps, from database and API to the last pixel. A background in cognitive neuroscience and UX design shapes how I make interfaces feel effortless.</p>
+      <div class="trm-rise" style="display: flex; flex-wrap: wrap; gap: 10px; font-size: 13px; animation-delay: .16s">
+        <a href="#work" style="text-decoration: none; font-weight: 700; background: {{t.ink}}; color: {{t.bg}}; padding: 12px 18px; border-radius: 999px">See the work</a>
+        <a href="#resume" style="text-decoration: none; font-weight: 700; padding: 11px 17px; border-radius: 999px; border: 1px solid {{t.line}}">Résumé (PDF)</a>
+      </div>
+      <p class="trm-rise" style="margin: 0; display: flex; align-items: center; gap: 10px; font-size: 13px; color: {{t.soft}}; animation-delay: .24s"><span style="width: 8px; height: 8px; border-radius: 50%; background: #22A06B; box-shadow: 0 0 0 4px rgba(34,160,107,.18)"></span>Open to full-stack and front-end roles</p>
+    </div>
+    <div style="position: relative; display: flex; justify-content: center; padding-top: 6px">
+      <div class="trm-rail" style="position: absolute; top: 6px; left: 0; right: 0; height: 4px; border-radius: 2px; background: {{t.rail}}"></div>
+      <figure class="trm-ticket" style="--tilt-from: -4deg; --tilt: -1.5deg; animation-delay: .3s; position: relative; margin: 6px 0 0; width: min(100%, 240px); background: {{t.paper}}; padding: 22px 16px 16px; border-radius: 2px; box-shadow: 0 10px 24px -14px rgba(20,23,26,.3); display: flex; flex-direction: column; gap: 10px; font-size: 12px">
+        <span aria-hidden="true" style="position: absolute; top: -8px; left: 50%; width: 28px; height: 14px; margin-left: -14px; border-radius: 3px; background: {{t.rail}}"></span>
+        <img src="../../public/images/naiad-photo.jpg" alt="Portrait of Naiad Baksh" style="width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 2px; background: {{t.panel}}">
+        <figcaption style="display: flex; justify-content: space-between; gap: 8px; border-top: 1px dashed {{t.line}}; padding-top: 8px; color: {{t.soft}}"><span>ENGINEER</span><span>TORONTO, ON</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section id="work" aria-labelledby="work-h" style="display: flex; flex-direction: column; gap: 20px">
+    <h2 id="work-h" style="margin: 0; font-size: 15px; font-weight: 800">Selected work</h2>
+    <div class="trm-rail" style="height: 4px; border-radius: 2px; background: {{t.rail}}; animation-delay: .2s"></div>
+    <div style="display: flex; flex-direction: column; gap: 16px; margin-top: -10px">
+      <sc-for list="{{projects}}" as="p" hint-placeholder-count="3">
+        <article class="trm-ticket" style="--tilt-from: {{p.tiltFrom}}; --tilt: {{p.tilt}}; animation-delay: {{p.delay}}; position: relative; background: {{t.paper}}; border-radius: 2px; box-shadow: 0 10px 24px -16px rgba(20,23,26,.3); padding-top: 10px">
+          <span aria-hidden="true" style="position: absolute; top: -6px; left: 28px; width: 24px; height: 12px; border-radius: 3px; background: {{t.rail}}"></span>
+          <button type="button" class="trm-row" onClick="{{p.toggle}}" aria-expanded="{{p.expanded}}" style="width: 100%; border: 0; background: transparent; color: {{t.ink}}; font: inherit; text-align: left; padding: 14px 20px; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 4px 16px; align-items: center; cursor: pointer">
+            <span style="font-weight: 800; font-size: 16px">{{p.title}}</span>
+            <svg class="trm-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="transform: {{p.chev}}; grid-row: span 2"><path d="M6 9l6 6 6-6"></path></svg>
+            <span style="font-size: 13px; color: {{t.accentText}}">{{p.summary}}</span>
+          </button>
+          <div class="trm-body" style="grid-template-rows: {{p.rows}}; opacity: {{p.opacity}}">
+            <div style="overflow: hidden">
+              <div style="padding: 4px 20px 20px; display: flex; flex-direction: column; gap: 14px; font-size: 13px">
+                <div style="aspect-ratio: 16 / 9; background: {{t.panel}}; border-radius: 2px; display: flex; align-items: center; justify-content: center; color: {{t.soft}}">[Screenshot or demo clip]</div>
+                <dl style="margin: 0; display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: 6px 16px; border-top: 1px dashed {{t.line}}; padding-top: 12px">
+                  <dt style="font-weight: 700">Problem</dt><dd style="margin: 0; color: {{t.soft}}">{{p.problem}}</dd>
+                  <dt style="font-weight: 700">Built</dt><dd style="margin: 0; color: {{t.soft}}">{{p.built}}</dd>
+                  <dt style="font-weight: 700">Stack</dt><dd style="margin: 0; color: {{t.soft}}">{{p.stack}}</dd>
+                </dl>
+                <a href="{{p.href}}" style="font-weight: 700">Read the case study →</a>
+              </div>
+            </div>
+          </div>
+        </article>
+      </sc-for>
+    </div>
+  </section>
+
+  <section id="about" aria-labelledby="about-h" style="display: flex; flex-direction: column; gap: 16px">
+    <h2 id="about-h" style="margin: 0; font-size: 15px; font-weight: 800">About</h2>
+    <p style="margin: 0; color: {{t.soft}}">I work mostly in React, TypeScript, Node and Python, and I care about clean architecture, performance and interfaces that feel obvious to use.</p>
+    <p style="margin: 0; color: {{t.soft}}">I studied cognitive neuroscience at Western University and UX design at BrainStation, so I design for how people actually perceive and decide. Outside of code, I'm a trained chef.</p>
+  </section>
+
+  <section id="experience" aria-labelledby="exp-h" style="display: flex; flex-direction: column; gap: 12px">
+    <h2 id="exp-h" style="margin: 0 0 8px; font-size: 15px; font-weight: 800">Experience</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); gap: 4px 24px; padding: 18px 20px; border-radius: 14px; background: {{t.panel}}; font-size: 13px">
+      <span style="color: {{t.soft}}">[Start] – [End]</span><span><span style="font-weight: 700">[Role]</span><span style="display: block; color: {{t.accentText}}">[Company]</span></span>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); gap: 4px 24px; padding: 18px 20px; border-radius: 14px; background: {{t.panel}}; font-size: 13px">
+      <span style="color: {{t.soft}}">[Start] – [End]</span><span><span style="font-weight: 700">[Role]</span><span style="display: block; color: {{t.accentText}}">[Company]</span></span>
+    </div>
+  </section>
+
+  <footer id="contact" style="display: flex; flex-direction: column; gap: 14px; border-top: 1px dashed {{t.line}}; padding-top: 28px">
+    <h2 style="margin: 0; font-size: 15px; font-weight: 800">Contact</h2>
+    <nav aria-label="Contact" style="display: flex; flex-wrap: wrap; gap: 8px 24px; font-size: 13px">
+      <a href="mailto:naiadbaksh@gmail.com">naiadbaksh@gmail.com</a>
+      <a href="https://www.linkedin.com/in/naiad-baksh-91963aa0/">LinkedIn</a>
+      <a href="https://github.com/naiadbaksh">GitHub</a>
+    </nav>
+  </footer>
+</main>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"dark":{"editor":"boolean","default":false},"$preview":{"width":1280,"height":1900}}'>
+class Component extends DCLogic {
+renderVals() {
+const dark = this.state.dark ?? this.props.dark ?? false;
+const t = dark
+  ? { bg: '#121416', ink: '#ECEEF0', soft: '#B4BAC0', faint: '#5E656C', panel: '#1E2124', paper: '#1A1D20', line: '#3A4046', rail: '#6E767E', accent: '#FF6B33', accentText: '#7FD3C4' }
+  : { bg: '#FFFFFF', ink: '#16191C', soft: '#4A5158', faint: '#A7ADB3', panel: '#F3F4F5', paper: '#FFFFFF', line: '#D6D9DC', rail: '#A9B0B7', accent: '#D9480F', accentText: '#1F6F66' };
+const open = this.state.open ?? 'tg';
+const data = [
+  { id: 'tg', title: 'Thought Garden', summary: 'Synced podcast listening for Spotify Premium users.', problem: 'Keep podcast playback in sync across listeners’ devices.', built: 'A Django REST API and React client on the Spotify Web API.', stack: 'Django REST · React · Spotify API', href: '#thoughtgarden', tiltFrom: '-3deg', tilt: '-0.5deg', delay: '.35s' },
+  { id: 'ec', title: 'eCommerce store', summary: 'A storefront with accounts, a cart and payments.', problem: 'Sell a catalogue with sign-in, a persistent cart and checkout.', built: 'A Redux storefront with Firebase auth and data, and Stripe checkout.', stack: 'React · Redux · Firebase · Stripe', href: '#ecommerce', tiltFrom: '3deg', tilt: '0.4deg', delay: '.45s' },
+  { id: 'pv', title: 'Pathfinding Visualizer', summary: 'Search algorithms, animated on an interactive grid.', problem: 'Make search algorithms visible and intuitive.', built: 'A grid that animates search and maze generation step by step.', stack: 'React · Hooks', href: '#pathfinding', tiltFrom: '-2deg', tilt: '-0.3deg', delay: '.55s' }
+];
+const projects = data.map((p) => {
+  const isOpen = open === p.id;
+  return { ...p, expanded: isOpen ? 'true' : 'false', rows: isOpen ? '1fr' : '0fr', opacity: isOpen ? 1 : 0, chev: isOpen ? 'rotate(180deg)' : 'none', toggle: () => this.setState({ open: isOpen ? null : p.id }) };
+});
+return { t, projects, themeLabel: dark ? 'Switch to light theme' : 'Switch to dark theme', toggleTheme: () => this.setState({ dark: !dark }) };
+}
+}
+</script>
+</body>
+</html>
