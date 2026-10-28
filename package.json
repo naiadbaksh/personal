@@ -21,8 +21,9 @@
     "web-vitals": "^0.2.4"
   },
   "scripts": {
-    "start": "node --openssl-legacy-provider node_modules/react-scripts/scripts/start.js",
-    "build": "node --openssl-legacy-provider node_modules/react-scripts/scripts/build.js",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
     "test": "node --openssl-legacy-provider node_modules/react-scripts/scripts/test.js",
     "eject": "react-scripts eject"
   },
