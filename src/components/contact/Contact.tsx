@@ -6,9 +6,9 @@ const links = [
 
 export default function Contact() {
   return (
+    // Inside <main>, so not a contentinfo landmark; aria-labelledby would not be announced.
     <footer
       id="contact"
-      aria-labelledby="contact-heading"
       className="flex flex-col gap-3.5 border-t border-dashed border-line pt-7"
     >
       <h2 id="contact-heading" className="text-[15px] font-extrabold">
