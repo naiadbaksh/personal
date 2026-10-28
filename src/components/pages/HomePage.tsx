@@ -1,6 +1,7 @@
 import SiteHeader from "../site-header/SiteHeader";
 import Intro from "../intro/Intro";
 import Work from "../work/Work";
+import About from "../about/About";
 
 export default function HomePage() {
   return (
@@ -13,6 +14,7 @@ export default function HomePage() {
       >
         <Intro />
         <Work />
+        <About />
       </main>
     </>
   );
