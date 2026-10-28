@@ -51,8 +51,8 @@ export const projects: Project[] = [
   {
     slug: "thoughtgarden",
     title: "Thought Garden",
-    summary: "Synced podcast listening for Spotify Premium users.",
-    problem: "Keep podcast playback in sync across listeners’ devices.",
+    summary: "A shared podcast room on one Spotify player.",
+    problem: "Let a group control one podcast player from their own phones.",
     built: "A Django REST API and React client on the Spotify Web API.",
     stack: ["Django REST", "React", "Spotify API"],
     ticketClass: "-rotate-[0.5deg] [--tilt-from:-3deg] motion-safe:[animation-delay:350ms]",
@@ -71,7 +71,7 @@ export const projects: Project[] = [
       caption: "The player.",
     },
     overview: [
-      "Thought Garden lets Spotify Premium users listen to the same podcast together, with playback kept in sync across their devices: a watch party for podcasts.",
+      "Thought Garden is a room for listening to a podcast together. The host plays the episode on their Spotify Premium account; everyone who joins with the room code sees what is playing and can control it from their own device.",
       "A Django REST backend talks to the Spotify Web API, and a React front end shows the room and the controls.",
     ],
     architecture: [

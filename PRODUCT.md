@@ -34,8 +34,9 @@ API to the last pixel.
 
 ## Projects, in order
 
-1. **Thought Garden** — synced podcast playback for Spotify Premium users ("a watch party for
-   podcasts"). Django REST, React, Spotify Web API.
+1. **Thought Garden** — a shared podcast room: the host's Spotify Premium account plays the
+   episode, and guests see it and control it from their own devices. Django REST, React,
+   Spotify Web API.
 2. **eCommerce store** — storefront with OAuth sign-in, persistent cart, Stripe checkout.
    React, Redux, Firebase, Stripe. Note: the old case study says it was built with help from
    course instructors (Yihua Zhang, Andrei Neagoie). Decide with Naiad how to present this
