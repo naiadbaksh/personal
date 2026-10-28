@@ -6,6 +6,7 @@ import tgFolders from "../images/web/thoughtGardenFolderStructure.webp";
 import tgForward from "../images/web/forwardFifteenSnippet.webp";
 import tgUtils from "../images/web/thoughtGardenCodeSnippet.webp";
 import tgHome from "../images/web/renderHomePageSnippet.webp";
+import tgPlayer from "../images/web/thoughtGardenPlayer.jpg";
 import ecShot from "../images/web/eCommerce.webp";
 import ecDiagram from "../images/web/systemDiagram.webp";
 import ecFolders from "../images/web/eCommerceFolderStructure.webp";
@@ -60,6 +61,15 @@ export const projects: Project[] = [
       { label: "Code on GitHub", href: "https://github.com/naiadbaksh/thought-garden" },
     ],
     video: { id: "ASBGLWwAu1I", title: "Thought Garden demo" },
+    // A frame of the demo video, shown on the home ticket only (the case study shows the
+    // video). The file is 640x480 with black bars; the ticket crops it to this 640x360.
+    shot: {
+      src: tgPlayer,
+      width: 640,
+      height: 360,
+      alt: "The Thought Garden player in a shared room: the room code, the current podcast episode's cover and title, a progress bar, and pause and skip 15 seconds controls.",
+      caption: "The player.",
+    },
     overview: [
       "Thought Garden lets Spotify Premium users listen to the same podcast together, with playback kept in sync across their devices: a watch party for podcasts.",
       "A Django REST backend talks to the Spotify Web API, and a React front end shows the room and the controls.",

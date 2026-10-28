@@ -72,7 +72,10 @@ export default function Work() {
                         alt={p.shot.alt}
                         loading="lazy"
                         decoding="async"
-                        className="h-auto w-full rounded-[2px] border border-line bg-panel"
+                        // The box takes the ratio from the data, and object-cover crops the
+                        // image to fit it (the Thought Garden frame has black bars).
+                        style={{ aspectRatio: `${p.shot.width} / ${p.shot.height}` }}
+                        className="h-auto w-full rounded-[2px] border border-line bg-panel object-cover"
                       />
                     ) : (
                       <div className="flex aspect-video items-center justify-center rounded-[2px] bg-panel text-soft">
