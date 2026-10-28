@@ -4,6 +4,7 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
+  Outlet,
   useNavigate,
 } from "react-router-dom";
 import "./App.css";
@@ -15,6 +16,21 @@ import ECommerceProject from "./components/pages/eCommerceProject";
 import ChatbotProject from "./components/pages/Chatbot";
 import ThoughtGardenProject from "./components/pages/ThoughtGardenProject";
 import ThemeToggle from "./components/theme-toggle/ThemeToggle";
+
+// The old site, kept until the rebuild replaces each page. Its global CSS is scoped to .legacy.
+function LegacyLayout() {
+  return (
+    <div className="legacy">
+      <a className="skip-link" href="#main-content">
+        Skip to main content
+      </a>
+      <Navbar />
+      <main id="main-content" tabIndex="-1">
+        <Outlet />
+      </main>
+    </div>
+  );
+}
 
 function AppContent() {
   const navigate = useNavigate();
@@ -30,16 +46,12 @@ function AppContent() {
 
   return (
     <>
-      <a className="skip-link" href="#main-content">
-        Skip to main content
-      </a>
-      <Navbar />
       {/* Temporary place for testing; moves into the new nav in Phase 3. */}
       <div className="fixed bottom-4 left-4 z-50">
         <ThemeToggle />
       </div>
-      <main id="main-content" tabIndex="-1">
-        <Routes>
+      <Routes>
+        <Route element={<LegacyLayout />}>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
@@ -50,8 +62,8 @@ function AppContent() {
           <Route path="/ecommerce" element={<ECommerceProject />} />
           <Route path="/aichatbot" element={<ChatbotProject />} />
           <Route path="/thoughtgarden" element={<ThoughtGardenProject />} />
-        </Routes>
-      </main>
+        </Route>
+      </Routes>
     </>
   );
 }
