@@ -3,6 +3,7 @@ import Intro from "../intro/Intro";
 import Work from "../work/Work";
 import About from "../about/About";
 import Experience from "../experience/Experience";
+import Contact from "../contact/Contact";
 
 export default function HomePage() {
   return (
@@ -17,6 +18,7 @@ export default function HomePage() {
         <Work />
         <About />
         <Experience />
+        <Contact />
       </main>
     </>
   );
