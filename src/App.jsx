@@ -14,6 +14,7 @@ import PathfindingProject from "./components/pages/PathfinderProject";
 import ECommerceProject from "./components/pages/eCommerceProject";
 import ChatbotProject from "./components/pages/Chatbot";
 import ThoughtGardenProject from "./components/pages/ThoughtGardenProject";
+import ThemeToggle from "./components/theme-toggle/ThemeToggle";
 
 function AppContent() {
   const navigate = useNavigate();
@@ -33,6 +34,10 @@ function AppContent() {
         Skip to main content
       </a>
       <Navbar />
+      {/* Temporary place for testing; moves into the new nav in Phase 3. */}
+      <div className="fixed bottom-4 left-4 z-50">
+        <ThemeToggle />
+      </div>
       <main id="main-content" tabIndex="-1">
         <Routes>
           <Route path="/" element={<Home />} />
