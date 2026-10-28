@@ -151,9 +151,13 @@ Status (2026-10-28, partly done):
 Also done (2026-10-28, second session, decided with Naiad): unknown paths show
 `NotFoundPage.tsx`; `/about` and `/contact` redirect to `/#about` and `/#contact` (`HomePage`
 scrolls to the `#hash` on mount); opening a case study sets the URL to `/#<slug>` first, so
-"back" returns to that ticket, open. `/aichatbot` is still the old page. Remaining: the
-résumé PDF (still has the phone number), the case-study placeholders, a re-run of
-Lighthouse, and Naiad's review on phone and laptop.
+"back" returns to that ticket, open. `/aichatbot` is still the old page. The case-study
+placeholders are replaced by drafts from the project code (`audience`, `decisions`,
+`differently` in `projects.ts`), and the Thought Garden copy now matches the code (one host
+player, shared controls). The eCommerce source was restored from the demo's source maps and
+pushed to `naiadbaksh/eCommerce`. Remaining: the résumé PDF (still has the phone number),
+Naiad's review of the case-study wording, a re-run of Lighthouse, and Naiad's review on phone
+and laptop.
 
 ## Phase 6 — Ship
 
