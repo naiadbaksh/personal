@@ -62,8 +62,6 @@ Follow `docs/direction.md` exactly. Craft floor, checked on the rendered page:
 
 ## Commands
 
-Fill these in after the Vite migration (phase 1):
-
 - `npm run dev` — local server with live reload
 - `npm run build` — production build
 - `npm run preview` — serve the production build locally
