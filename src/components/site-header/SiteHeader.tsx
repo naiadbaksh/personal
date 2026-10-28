@@ -1,10 +1,10 @@
 import ThemeToggle from "../theme-toggle/ThemeToggle";
 
 const sections = [
-  { href: "#work", label: "Work" },
-  { href: "#about", label: "About" },
-  { href: "#experience", label: "Experience" },
-  { href: "#contact", label: "Contact" },
+  { href: "/#work", label: "Work" },
+  { href: "/#about", label: "About" },
+  { href: "/#experience", label: "Experience" },
+  { href: "/#contact", label: "Contact" },
 ];
 
 // Links are min-h-11 (44px) for touch targets; the mockup's text position is unchanged.
@@ -29,10 +29,10 @@ export default function SiteHeader() {
         Skip to main content
       </a>
       <header className="mx-auto flex max-w-[768px] flex-wrap items-center gap-x-1.5 px-6 py-5 text-[13px]">
-        {/* #top scrolls to the top of the page, even before the intro has that id. */}
-        <a href="#top" className={`${link} order-1 font-extrabold`}>
+        {/* Same-page jump on the home page; loads the home page from anywhere else. */}
+        <a href="/#top" className={`${link} order-1 font-extrabold`}>
           <span className="rounded-full bg-panel px-2.5 py-1 leading-none">NB</span>
-          <span className="sr-only">, back to top</span>
+          <span className="sr-only">, home</span>
         </a>
         <nav
           aria-label="Main"
