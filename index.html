@@ -33,6 +33,17 @@
     -->
     <link rel="manifest" href="/manifest.json" />
     <title>Naiad | Software Engineer</title>
+    <!-- Apply the saved theme before the first paint, so the page never flashes the wrong one. -->
+    <script>
+      try {
+        const theme = localStorage.getItem("theme");
+        if (theme === "light" || theme === "dark") {
+          document.documentElement.dataset.theme = theme;
+        }
+      } catch {
+        // Storage can be blocked (for example in private windows); the system theme applies.
+      }
+    </script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
