@@ -164,6 +164,17 @@ and laptop.
 Naiad merges `redesign` into `master` (or approves the push). Confirm the GitHub Action
 succeeds and naiadbaksh.com shows the new site.
 
+Status: **done 2026-10-28.** Naiad reviewed the site on his phone (`vite preview --host`) and
+approved going live. The résumé PDF (no phone number; checked in the text, streams and links)
+was committed first. `master` was fast-forwarded to `redesign` at `bece91d`; the deploy
+workflow succeeded. Checked live: home, the three case studies, `/foo` ("Page not found"),
+the résumé, `og-image.png`. Notes:
+
+- Deep links (`/ecommerce` and others) return HTTP 404 with the `404.html` redirect, so the
+  page works in a browser but search engines do not index the case studies. A fix is a real
+  HTML file per route at build time (prerendering).
+- Not done from Phase 5: the Lighthouse re-run, and Naiad's read of the case-study wording.
+
 ## After launch
 
 - Write `DESIGN.md` from the built site (Impeccable `document`).
