@@ -38,7 +38,7 @@ export default function Experience() {
       <ol className="flex flex-col gap-1 text-[13px] text-soft">
         {other.map((o) => (
           <li key={o.role}>
-            {o.role}, {o.company} · {o.years}
+            {o.role}, {o.company} · <span className="whitespace-nowrap">{o.years}</span>
           </li>
         ))}
       </ol>
