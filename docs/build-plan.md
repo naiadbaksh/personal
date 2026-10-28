@@ -56,17 +56,22 @@ The old styled-components files stay until Phase 3 replaces them.
 
 ## Phase 3 — Home page
 
-First, switch to the full `@import "tailwindcss"` so Preflight (Tailwind's CSS reset) is on.
-Also remove the old global CSS: `App.css` has `* { margin: 0; padding: 0; }`, and unlayered
-rules like it beat Tailwind's spacing utilities; `index.css` has a blue `:focus-visible` ring
-that hides the new accent focus ring. Then move `ThemeToggle` from its temporary
-spot in `App.jsx` into the new nav. (Home and About render a second old `Navbar`; the new
-nav must render once.)
-Then add the base rules deferred from Phase 2: in `@layer base`, `body { background-color:
-var(--bg); color: var(--ink); font-family: var(--font-mono); font-size: 15px; line-height:
-1.75; }`, and `color-scheme: light` / `dark` in the token blocks. (In Phase 2 they made the
-old pages unreadable in dark mode. The old case-study pages will look wrong in dark mode
-from here until Phase 4 rebuilds them; the branch is not deployed, so that is accepted.)
+Setup (done 2026-10-28):
+
+- The old pages render inside `LegacyLayout` (`<div class="legacy">` in `App.jsx`), and their
+  22 global CSS rules (`*`, `h1`–`h3`, `p`, `main`, `:focus`) are scoped with
+  `:where(.legacy)`, so they cannot reach the new markup. Removing them instead would have
+  broken the old case-study pages, which stay until Phase 4. Delete the old CSS with them.
+- `/` renders the new `HomePage.tsx` outside `.legacy`. The old `Home.jsx`, `HeroSection`,
+  `Cards` and `Footer` are no longer rendered.
+- Preflight is on, plus the base rules deferred from Phase 2 (`body` colours, font, size,
+  line height; `color-scheme`). The old case-study pages get the dark page background in
+  dark mode until Phase 4 rebuilds them; the branch is not deployed, so that is accepted.
+- The `<main>` column is `max-w-[768px]` with `px-6`: Preflight's `border-box` keeps the text
+  column at the design's 720px.
+
+Still to do in the Nav step: move `ThemeToggle` from its temporary spot in `App.jsx` into the
+new nav. (Home and About render a second old `Navbar`; the new nav must render once.)
 
 Build in this order, one commit each, styled with Tailwind utilities: Nav → Intro (with photo
 ticket) → Rail + Project tickets (expand/collapse) → About → Experience → Footer → motion.
