@@ -1,3 +1,4 @@
 {
-  "autoimport.filesToScan": "**/*.{js,jsx}"
+  "autoimport.filesToScan": "**/*.{js,jsx}",
+  "tailwindCSS.lint.suggestCanonicalClasses": "ignore"
 }
