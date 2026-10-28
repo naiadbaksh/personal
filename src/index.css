@@ -5,16 +5,16 @@
   src: local("AN-Bold") url("./fonts/AvenirNext-Bold-01.ttf") format("truetype");
 }
 
-:focus {
+:where(.legacy) :focus {
   outline: 3px solid #2f6fed;
   outline-offset: 2px;
 }
 
-:focus:not(:focus-visible) {
+:where(.legacy) :focus:not(:focus-visible) {
   outline: none;
 }
 
-:focus-visible {
+:where(.legacy) :focus-visible {
   outline: 3px solid #2f6fed;
   outline-offset: 2px;
 }
@@ -47,6 +47,6 @@
   border: 0;
 }
 
-main {
+:where(.legacy) main {
   display: block;
 }

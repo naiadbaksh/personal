@@ -1,4 +1,4 @@
-* {
+:where(body, .legacy, .legacy *) {
   box-sizing: border-box;
   margin: 0;
   padding: 0;

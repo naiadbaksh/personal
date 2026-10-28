@@ -3,7 +3,7 @@
   background: #fff;
 }
 
-h1 {
+:where(.legacy) h1 {
   text-align: center;
 }
 
