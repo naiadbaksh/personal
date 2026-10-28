@@ -110,7 +110,8 @@ from `src/content/projects.ts` (the home tickets read the same file). Notes:
 - Links checked, all HTTP 200: eCommerce demo `jovial-wozniak-c11748.netlify.app`, Pathfinding
   demo `naiadbaksh.github.io/pathfinding`, Thought Garden YouTube demo `ASBGLWwAu1I`, and the
   repos `naiadbaksh/thought-garden`, `/eCommerce`, `/pathfinding`. Thought Garden has no live
-  app (the old page's commented-out link was a Netlify preview of the eCommerce site).
+  app link (the old page's commented-out link pointed at a deploy of the same Netlify site as
+  the eCommerce demo; unclear what it showed).
 - Text is from the old pages, shortened. Alt text was written from the images themselves.
 - `[PLACEHOLDER]`: "who it is for" under The problem, Decisions and tradeoffs, and What I'd do
   differently, on all three pages. Naiad writes these.
