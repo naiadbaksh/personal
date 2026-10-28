@@ -43,8 +43,11 @@ export type Project = {
   shot?: Figure;
   credit?: string;
   overview: string[];
+  audience: string; // who it is for, and why the problem matters
   architecture: Figure[];
   code: Figure[];
+  decisions: { title: string; text: string }[];
+  differently: string[];
 };
 
 export const projects: Project[] = [
@@ -73,6 +76,31 @@ export const projects: Project[] = [
     overview: [
       "Thought Garden is a room for listening to a podcast together. The host plays the episode on their Spotify Premium account; everyone who joins with the room code sees what is playing and can control it from their own device.",
       "A Django REST backend talks to the Spotify Web API, and a React front end shows the room and the controls.",
+    ],
+    audience:
+      "For a group listening to a podcast together, in one room or on a call. Usually one person holds the phone and everyone else asks them to pause or skip back. Thought Garden puts the controls on everyone’s own device, while the episode keeps playing from one place.",
+    decisions: [
+      {
+        title: "One player, not many.",
+        text: "The host’s Spotify account is the only player. Every command (play, pause, back or forward 15 seconds) goes through the server to the host’s device, so there is never more than one player to keep in sync. The cost: the host needs Spotify Premium and an active device.",
+      },
+      {
+        title: "Polling, not WebSockets.",
+        text: "The room page asks the server for the current episode every 500 ms. That kept the backend a plain Django REST app with no socket layer, but every open room makes two requests a second, and each one calls the Spotify API.",
+      },
+      {
+        title: "Tokens stay on the server.",
+        text: "The OAuth exchange and token refresh happen in Django, keyed to the browser session, so the client secret and refresh tokens never reach the browser.",
+      },
+      {
+        title: "The host sets the rules.",
+        text: "Guests can pause only if the host allows it, and a skip needs the number of votes the host chose.",
+      },
+    ],
+    differently: [
+      "Push updates over WebSockets or server-sent events, and call Spotify once per room instead of once per guest per poll.",
+      "Fold the three near-identical Spotify request helpers into one that checks token expiry before each call and reports errors instead of hiding them behind a bare except.",
+      "Keep the Python virtual environment out of the repository.",
     ],
     architecture: [
       {
@@ -142,6 +170,31 @@ export const projects: Project[] = [
       "A working online store for Italian-inspired menswear: browse collections, sign in, keep a cart, and pay.",
       "Redux holds app state, so components get data without prop drilling. Firebase Firestore is the database, sign-in uses OAuth 2, and Stripe handles payments. The UI uses React class and function components with hooks, styled first with Sass and later with styled-components.",
     ],
+    audience:
+      "Every online shopper expects the same things: sign-in, a cart that remembers what they added, and a checkout that works. I built this store to learn how those pieces connect in a real React app: authentication, a database, global state and payments.",
+    decisions: [
+      {
+        title: "Redux for shared state.",
+        text: "The user, the cart and the shop data are needed on many pages, so they live in one store instead of being passed down through props. The cost is ceremony: actions, types, reducers and selectors for every slice.",
+      },
+      {
+        title: "Selectors between the store and the UI.",
+        text: "Components read state through selectors, so changing the shape of the store doesn’t break every component that uses it.",
+      },
+      {
+        title: "Firebase, not my own server.",
+        text: "Firestore and Firebase Auth gave me a database and OAuth sign-in with no backend to run. The cost: the data model and sign-in are tied to one vendor.",
+      },
+      {
+        title: "Sass first, then styled-components.",
+        text: "The move put each component’s styles next to its code. The pages still use Sass, so the project shows both approaches side by side.",
+      },
+    ],
+    differently: [
+      "Use Redux Toolkit, which removes most of the hand-written action and reducer code.",
+      "Use function components and hooks throughout instead of a mix with class components.",
+      "Add TypeScript to the product, cart and user models, where a wrong field shape costs money.",
+    ],
     architecture: [
       {
         src: ecDiagram,
@@ -209,6 +262,31 @@ export const projects: Project[] = [
     overview: [
       "An interactive grid that animates seven search algorithms (including Dijkstra’s, A*, breadth-first and depth-first) and four maze generators, one step at a time, so you can watch how each algorithm explores.",
       "I started from a sketch of the finished interface and built it from three React components: the visualizer, the toolbar and the node.",
+    ],
+    audience:
+      "For students learning graph search, and anyone curious how a map finds a route. On paper, Dijkstra’s algorithm is a page of pseudocode. On a grid you can watch it spread out in every direction while A* heads straight for the target, and the difference is obvious in a few seconds.",
+    decisions: [
+      {
+        title: "Compute first, animate after.",
+        text: "Each algorithm runs to completion and returns the order in which it visited the nodes. The animation then replays that order.",
+      },
+      {
+        title: "Animate in the DOM, not in React state.",
+        text: "Each step changes a cell’s class directly by its id. Re-rendering a grid of thousands of cells on every step would be far too slow. The cost: React no longer knows what the grid looks like, so clearing the board has to reset those classes by hand.",
+      },
+      {
+        title: "One file per algorithm and per maze.",
+        text: "Each one returns plain data, so adding an algorithm doesn’t touch the visualizer.",
+      },
+      {
+        title: "The grid fits the screen.",
+        text: "Rows and columns come from the window size and are recalculated when the window is resized.",
+      },
+    ],
+    differently: [
+      "Use a priority queue in Dijkstra’s algorithm. My version sorts every unvisited node on each step; a binary heap does far less work on large grids.",
+      "Add weighted cells. On an unweighted grid Dijkstra’s explores exactly like breadth-first search; weights would show why it exists.",
+      "Split the 732-line visualizer component into separate pieces for grid state, animation and mouse input.",
     ],
     architecture: [
       {

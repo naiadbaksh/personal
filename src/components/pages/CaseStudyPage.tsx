@@ -36,10 +36,6 @@ function Shot({ figure, eager = false }: { figure: Figure; eager?: boolean }) {
   );
 }
 
-function Placeholder({ children }: { children: ReactNode }) {
-  return <p className="text-soft">[PLACEHOLDER: {children}]</p>;
-}
-
 export default function CaseStudyPage({ slug }: { slug: string }) {
   const project = projects.find((p) => p.slug === slug)!;
 
@@ -125,7 +121,7 @@ export default function CaseStudyPage({ slug }: { slug: string }) {
 
         <Section title="The problem">
           <p className="text-soft">{project.problem}</p>
-          <Placeholder>who it is for, and why the problem matters</Placeholder>
+          <p className="text-soft">{project.audience}</p>
         </Section>
 
         <Section title="Architecture">
@@ -141,11 +137,21 @@ export default function CaseStudyPage({ slug }: { slug: string }) {
         </Section>
 
         <Section title="Decisions and tradeoffs">
-          <Placeholder>two or three key decisions, what you chose instead, and why</Placeholder>
+          <ul className="flex list-disc flex-col gap-3 pl-5 text-soft marker:text-faint">
+            {project.decisions.map((d) => (
+              <li key={d.title}>
+                <strong className="text-ink">{d.title}</strong> {d.text}
+              </li>
+            ))}
+          </ul>
         </Section>
 
         <Section title="What I'd do differently">
-          <Placeholder>what you would change now, with what you know today</Placeholder>
+          <ul className="flex list-disc flex-col gap-3 pl-5 text-soft marker:text-faint">
+            {project.differently.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
         </Section>
 
         <Contact />
