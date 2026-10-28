@@ -19,3 +19,62 @@
 @theme {
   --font-mono: "JetBrains Mono", ui-monospace, monospace;
 }
+
+/* Colour tokens from docs/direction.md. Light by default; dark follows the system setting
+   unless the theme toggle picked light, or applies when the toggle picked dark. */
+:root {
+  --bg: #ffffff;
+  --ink: #16191c;
+  --soft: #4a5158;
+  --faint: #a7adb3;
+  --panel: #f3f4f5;
+  --paper: #ffffff;
+  --line: #d6d9dc;
+  --rail: #a9b0b7;
+  --accent: #d9480f;
+  --accent-text: #1f6f66;
+  --status: #22a06b;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #121416;
+    --ink: #eceef0;
+    --soft: #b4bac0;
+    --faint: #5e656c;
+    --panel: #1e2124;
+    --paper: #1a1d20;
+    --line: #3a4046;
+    --rail: #6e767e;
+    --accent: #ff6b33;
+    --accent-text: #7fd3c4;
+  }
+}
+
+:root[data-theme="dark"] {
+  --bg: #121416;
+  --ink: #eceef0;
+  --soft: #b4bac0;
+  --faint: #5e656c;
+  --panel: #1e2124;
+  --paper: #1a1d20;
+  --line: #3a4046;
+  --rail: #6e767e;
+  --accent: #ff6b33;
+  --accent-text: #7fd3c4;
+}
+
+/* Expose the tokens as Tailwind colours: text-ink, bg-panel, border-line, ... */
+@theme inline {
+  --color-bg: var(--bg);
+  --color-ink: var(--ink);
+  --color-soft: var(--soft);
+  --color-faint: var(--faint);
+  --color-panel: var(--panel);
+  --color-paper: var(--paper);
+  --color-line: var(--line);
+  --color-rail: var(--rail);
+  --color-accent: var(--accent);
+  --color-accent-text: var(--accent-text);
+  --color-status: var(--status);
+}
