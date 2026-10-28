@@ -61,6 +61,9 @@ First, switch to the full `@import "tailwindcss"` so Preflight (Tailwind's CSS r
 Build in this order, one commit each, styled with Tailwind utilities: Nav → Intro (with photo
 ticket) → Rail + Project tickets (expand/collapse) → About → Experience → Footer → motion.
 
+Note: the self-hosted JetBrains Mono subset has no `→` (U+2192), so "Read the case study →"
+falls back to the system monospace font. Decide then: an inline SVG arrow, or accept it.
+
 **Check after each:** looks right at 375px and 1280px; keyboard can reach and operate
 everything; no console errors.
 
