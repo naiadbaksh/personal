@@ -180,7 +180,7 @@
     transition: 250ms;
   }
 
-  Button {
+  :where(.legacy) Button {
     display: none;
   }
 }
