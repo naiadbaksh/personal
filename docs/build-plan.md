@@ -73,11 +73,23 @@ Setup (done 2026-10-28):
 - The `<main>` column is `max-w-[768px]` with `px-6`: Preflight's `border-box` keeps the text
   column at the design's 720px.
 
-Still to do in the Nav step: move `ThemeToggle` from its temporary spot in `App.jsx` into the
-new nav. (Home and About render a second old `Navbar`; the new nav must render once.)
-
 Build in this order, one commit each, styled with Tailwind utilities: Nav → Intro (with photo
 ticket) → Rail + Project tickets (expand/collapse) → About → Experience → Footer → motion.
+
+Status: **done 2026-10-28** (each section checked at 375px and 1280px, light and dark, by
+keyboard, no new console errors). Components are in `src/components/` (`site-header`, `intro`,
+`work`, `about`, `experience`, `contact`), composed by `pages/HomePage.tsx`. Notes:
+
+- Below 640px the header puts NB and the toggle on row 1 and the links on row 2 (the
+  mockup's wrap left a dangling slash). `ThemeToggle` lives in the header now.
+- An old `Button { display: none }` rule inside a media query in `Navbar.css` hid every button
+  below 960px; it is scoped to `.legacy` too.
+- Experience comes from the résumé: five engineering roles as panels, the two
+  non-engineering roles in a small "Other experience" list (Naiad's choice).
+- Motion keyframes live in `tailwind.css` `@theme` (`animate-rise/rail/drop`,
+  `ease-settle`), always used with `motion-safe:`.
+- Open content: the résumé PDF still contains the phone number, so it is not committed;
+  project screenshots are `[PLACEHOLDER]`; the photo is 400px.
 
 Note: the self-hosted JetBrains Mono subset has no `→` (U+2192). Decided: "Read the case
 study" uses an inline SVG arrow (`aria-hidden`), not the glyph.
