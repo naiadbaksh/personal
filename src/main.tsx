@@ -1,6 +1,7 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
 import App from "./App";
+import "./tailwind.css";
 import "./index.css";
 import "./fonts/AvenirNext-Bold-01.ttf";
 import "./fonts/AvenirNext-BoldItalic-02.ttf";

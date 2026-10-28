@@ -1,0 +1,5 @@
+/* Tailwind without Preflight (its CSS reset), so the old UI keeps its look.
+   Phase 3 replaces these imports with @import "tailwindcss"; */
+@layer theme, base, components, utilities;
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities);
