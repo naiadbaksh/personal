@@ -1,23 +1,23 @@
 // The three projects: the home page tickets and the case-study pages both read from here.
 // Facts come from the old case-study pages and PRODUCT.md. Anything not known yet is
 // marked [PLACEHOLDER] for Naiad to fill in.
-import tgDiagram from "../images/thoughtGardenSystemDiagram.png";
-import tgFolders from "../images/thoughtGardenFolderStructure.png";
-import tgForward from "../images/forwardFifteenSnippet.png";
-import tgUtils from "../images/thoughtGardenCodeSnippet.png";
-import tgHome from "../images/renderHomePageSnippet.png";
-import ecShot from "../images/eCommerce.png";
-import ecDiagram from "../images/systemDiagram.png";
-import ecFolders from "../images/eCommerceFolderStructure.png";
-import ecItem from "../images/collectionItemCodeSnippet.png";
-import ecPage from "../images/collectionPageSnippet.png";
-import ecReducer from "../images/userReducerCodeSnippet.png";
-import pfShot from "../images/pathfinding.jpg";
-import pfSketch from "../images/projectSketch.jpg";
-import pfFolders from "../images/pathfinderFolderStructure.png";
-import pfNode from "../images/nodeCodeSnippet.png";
-import pfNodeComp from "../images/nodeCompCodeSnippet.png";
-import pfDijkstra from "../images/dijkstraCodeSnippet.png";
+import tgDiagram from "../images/web/thoughtGardenSystemDiagram.webp";
+import tgFolders from "../images/web/thoughtGardenFolderStructure.webp";
+import tgForward from "../images/web/forwardFifteenSnippet.webp";
+import tgUtils from "../images/web/thoughtGardenCodeSnippet.webp";
+import tgHome from "../images/web/renderHomePageSnippet.webp";
+import ecShot from "../images/web/eCommerce.webp";
+import ecDiagram from "../images/web/systemDiagram.webp";
+import ecFolders from "../images/web/eCommerceFolderStructure.webp";
+import ecItem from "../images/web/collectionItemCodeSnippet.webp";
+import ecPage from "../images/web/collectionPageSnippet.webp";
+import ecReducer from "../images/web/userReducerCodeSnippet.webp";
+import pfShot from "../images/web/pathfinding.webp";
+import pfSketch from "../images/web/projectSketch.webp";
+import pfFolders from "../images/web/pathfinderFolderStructure.webp";
+import pfNode from "../images/web/nodeCodeSnippet.webp";
+import pfNodeComp from "../images/web/nodeCompCodeSnippet.webp";
+import pfDijkstra from "../images/web/dijkstraCodeSnippet.webp";
 
 export type Figure = {
   src: string;
@@ -67,8 +67,8 @@ export const projects: Project[] = [
     architecture: [
       {
         src: tgDiagram,
-        width: 1522,
-        height: 946,
+        width: 1440,
+        height: 895,
         alt: "System diagram: the React user interface talks to the Django back end, where URLs route to views and utility functions that call the Spotify API.",
         caption: "System design.",
       },
@@ -84,23 +84,23 @@ export const projects: Project[] = [
     code: [
       {
         src: tgForward,
-        width: 1666,
-        height: 708,
+        width: 1440,
+        height: 612,
         alt: "Python code: a Django API view class that calls forward_fifteen().",
         caption: "An API view that calls forward_fifteen().",
       },
       {
         src: tgUtils,
-        width: 1822,
-        height: 1050,
+        width: 1440,
+        height: 830,
         alt: "Python utility functions that read the episode's progress and skip ahead 15 seconds through the Spotify API.",
         caption:
           "Utility functions for the API views: one finds the current episode's progress in milliseconds; the other uses it to ask the Spotify API to skip ahead 15 seconds.",
       },
       {
         src: tgHome,
-        width: 1514,
-        height: 1006,
+        width: 1440,
+        height: 957,
         alt: "React code that renders the home page.",
         caption: "Front-end code that renders the home page.",
       },
@@ -121,8 +121,8 @@ export const projects: Project[] = [
     ],
     shot: {
       src: ecShot,
-      width: 2542,
-      height: 1388,
+      width: 1440,
+      height: 786,
       alt: "The store's home page: an NB logo, Shop, Contact and Sign in links, a cart icon, and tiles for coats, shirts, shoes, suits and eveningwear.",
       caption: "The storefront.",
     },
@@ -152,16 +152,16 @@ export const projects: Project[] = [
     code: [
       {
         src: ecItem,
-        width: 1684,
-        height: 804,
+        width: 1440,
+        height: 688,
         alt: "React code for the collection item component.",
         caption:
           "The collection item. It takes item and addItem as props, shows the image, name and price, and its button adds the item to the cart.",
       },
       {
         src: ecPage,
-        width: 1648,
-        height: 876,
+        width: 1440,
+        height: 765,
         alt: "React code for the collection page component.",
         caption:
           "The collection page maps a collection's items to collection items, so one data source in the database produces every product card.",
@@ -190,8 +190,8 @@ export const projects: Project[] = [
     ],
     shot: {
       src: pfShot,
-      width: 2560,
-      height: 1392,
+      width: 1440,
+      height: 783,
       alt: "The visualizer: a toolbar with Algorithms, Visualize Algorithm, Mazes, Generate Maze, Clear Grid and Speed above a large grid with a green start node and a red end node.",
       caption: "The visualizer.",
     },
@@ -203,8 +203,8 @@ export const projects: Project[] = [
     architecture: [
       {
         src: pfSketch,
-        width: 4032,
-        height: 3024,
+        width: 1440,
+        height: 1080,
         alt: "Hand-drawn sketch on grid paper: the toolbar, the grid with a start node, an end node and the shortest path between them, the area Dijkstra's algorithm explores, and notes on the toolbar, grid and node components.",
         caption: "The sketch I worked from.",
       },
@@ -227,16 +227,16 @@ export const projects: Project[] = [
       },
       {
         src: pfNodeComp,
-        width: 1582,
-        height: 732,
+        width: 1440,
+        height: 666,
         alt: "React code for the node component.",
         caption:
           "The node component: a div whose id comes from its row and column, with classes, styles and handlers passed in as props.",
       },
       {
         src: pfDijkstra,
-        width: 1480,
-        height: 1020,
+        width: 1440,
+        height: 992,
         alt: "JavaScript implementation of Dijkstra's algorithm.",
         caption:
           "Dijkstra’s algorithm, which finds the shortest path from one node to every other node in the grid.",
