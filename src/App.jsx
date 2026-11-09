@@ -31,6 +31,7 @@ function AppContent() {
     <>
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/accesslens" element={<CaseStudyPage slug="accesslens" />} />
         <Route
           path="/thoughtgarden"
           element={<CaseStudyPage slug="thoughtgarden" />}

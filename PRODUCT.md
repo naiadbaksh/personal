@@ -26,7 +26,7 @@ API to the last pixel.
 ## Page structure (settled)
 
 1. Intro: name, "Software Engineer", pitch, See the work, Résumé (PDF), availability line, photo.
-2. Selected work: three projects, each expands to screenshot/clip, Problem, Built, Stack, and a
+2. Selected work: four projects, each expands to screenshot/clip, Problem, Built, Stack, and a
    link to its case-study page.
 3. About: short, stack-first. Neuroscience and UX background. Chef as one line.
 4. Experience: work history from his résumé, plus a downloadable PDF.
@@ -34,14 +34,18 @@ API to the last pixel.
 
 ## Projects, in order
 
-1. **Thought Garden** — a shared podcast room: the host's Spotify Premium account plays the
+1. **AccessLens** — an AI agent that audits web pages and React Native components for
+   accessibility (WCAG 2.2 AA), explains who each problem affects and suggests a fix. React,
+   Express + TypeScript, Claude Messages API with tool use, axe-core. Added 2026-11-08 as the
+   modern TypeScript project. Still wanted: a real screenshot or clip of the app.
+2. **Thought Garden** — a shared podcast room: the host's Spotify Premium account plays the
    episode, and guests see it and control it from their own devices. Django REST, React,
    Spotify Web API.
-2. **eCommerce store** — storefront with OAuth sign-in, persistent cart, Stripe checkout.
+3. **eCommerce store** — storefront with OAuth sign-in, persistent cart, Stripe checkout.
    React, Redux, Firebase, Stripe. Note: the old case study says it was built with help from
    course instructors (Yihua Zhang, Andrei Neagoie). Decide with Naiad how to present this
    honestly, or replace it with a new project later.
-3. **Pathfinding Visualizer** — animates search and maze-generation algorithms on a grid.
+4. **Pathfinding Visualizer** — animates search and maze-generation algorithms on a grid.
    React with hooks.
 
 The AI Chatbot project comes off the home page while the "Wednesday" chatbot is hidden.
@@ -68,5 +72,4 @@ Every demo link must be checked before launch; several point at old Netlify URLs
 ## Later
 
 - Rework "Wednesday" the recruiter chatbot (he/him copy, no auto-open, no phone number).
-- One new modern project (TypeScript, current React) to show current skills.
 - Short demo videos made with Remotion.
