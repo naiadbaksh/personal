@@ -1,6 +1,10 @@
-// The three projects: the home page tickets and the case-study pages both read from here.
+// The four projects: the home page tickets and the case-study pages both read from here.
 // Facts come from the old case-study pages and PRODUCT.md. Anything not known yet is
 // marked [PLACEHOLDER] for Naiad to fill in.
+import alDiagram from "../images/web/accessLensSystemDiagram.webp";
+import alSchema from "../images/web/accessLensSchemaSnippet.webp";
+import alLoop from "../images/web/accessLensAgentLoopSnippet.webp";
+import alRetry from "../images/web/accessLensRetrySnippet.webp";
 import tgDiagram from "../images/web/thoughtGardenSystemDiagram.webp";
 import tgFolders from "../images/web/thoughtGardenFolderStructure.webp";
 import tgForward from "../images/web/forwardFifteenSnippet.webp";
@@ -52,13 +56,88 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    slug: "accesslens",
+    title: "AccessLens",
+    summary: "An AI agent that audits pages and components for accessibility.",
+    problem: "Find the accessibility problems a scanner misses, and say how to fix each one.",
+    built: "An AI agent on the Claude API, with a React app and an Express and TypeScript API.",
+    stack: ["TypeScript", "React", "Express", "Claude API", "axe-core"],
+    ticketClass: "-rotate-[0.4deg] [--tilt-from:-2.5deg] motion-safe:[animation-delay:350ms]",
+    links: [{ label: "Code on GitHub", href: "https://github.com/naiadbaksh/accesslens" }],
+    shot: {
+      src: alDiagram,
+      width: 1440,
+      height: 810,
+      alt: "System diagram: the React app sends a request to the Express API, which hands it to the agent loop. The agent loop calls three tools (run_accessibility_scan, search_wcag and submit_report) and returns a report. A shared package of Zod schemas is used by every part.",
+      caption: "How a request moves through AccessLens.",
+    },
+    overview: [
+      "AccessLens is an AI agent that audits web pages and React Native components for accessibility problems against WCAG 2.2 AA. You paste HTML, a URL or a component; it returns a report that names each problem, explains who it affects, and suggests a code fix.",
+      "The agent runs the axe-core accessibility engine, looks up the relevant WCAG criteria, and reads the code for problems automated tools miss. A React app sends the request to an Express and TypeScript API, which runs the agent loop on the Claude Messages API.",
+    ],
+    audience:
+      "For developers checking a page or a component before it ships. A scanner catches rule violations in markup, but not unclear labels, colour contrast set in CSS it can’t render, or native mobile code at all. AccessLens runs the scanner, reviews the code for the rest, and says who each problem hurts, so it’s clear what to fix first.",
+    architecture: [
+      {
+        src: alSchema,
+        width: 1440,
+        height: 969,
+        alt: "TypeScript code: Zod schemas for Severity, Finding and AgentReport, and the submit_report tool definition whose input_schema is generated from AgentReport.",
+        caption:
+          "One contract. The report's Zod schema lives in a shared package; the web app, the API and the AI's submit_report tool all use it, so they can't drift apart.",
+      },
+    ],
+    code: [
+      {
+        src: alLoop,
+        width: 1440,
+        height: 642,
+        alt: "TypeScript code from the agent loop: when the model calls submit_report, the input is checked with AgentReport.safeParse; a valid report ends the loop, and an invalid one goes back to the model as an error tool result listing the problems.",
+        caption:
+          "The agent loop. A bad report doesn't crash the audit: it goes back to the model with the validation errors, and the model tries again.",
+      },
+      {
+        src: alRetry,
+        width: 1440,
+        height: 1062,
+        alt: "TypeScript code: a withRetry function that retries a failed call with exponential backoff and jitter, and waits as long as the server asks when it sends a retry-after hint.",
+        caption:
+          "Retries for the AI call: exponential backoff with jitter, only for temporary failures like 429 and 5xx, and the server's own retry-after time when it gives one.",
+      },
+    ],
+    decisions: [
+      {
+        title: "Plain fetch, not the SDK.",
+        text: "The API calls the Claude Messages API directly, so every part of the agent loop is visible: the tool definitions, the tool_use blocks and the tool_result replies.",
+      },
+      {
+        title: "The report is a tool call.",
+        text: "The model finishes by calling submit_report, whose schema is generated from Zod. Bad output is sent back with the validation errors instead of crashing.",
+      },
+      {
+        title: "Fakes, not network, in tests.",
+        text: "The AI client, the scanner and the page fetcher are passed in, so the tests run the full agent loop with fakes and no network.",
+      },
+      {
+        title: "Limits everywhere.",
+        text: "8 agent turns, 60 seconds per AI call, 10 seconds and 2 MB per page fetch, 1 MB request bodies, and 10 audits per minute per client.",
+      },
+    ],
+    differently: [
+      "Render pages in a real browser. jsdom doesn't render, so axe can't check colour contrast and pages built with JavaScript are scanned before their scripts run.",
+      "Close the DNS-rebinding gap in the SSRF guard: it checks DNS before fetching, and a hostile DNS server could change the answer in between.",
+      "Save audit history in Postgres, and replace the keyword WCAG search with semantic retrieval (embeddings and pgvector).",
+      "Add an eval suite with known issues, to measure precision and recall per model and prompt version.",
+    ],
+  },
+  {
     slug: "thoughtgarden",
     title: "Thought Garden",
     summary: "A shared podcast room on one Spotify player.",
     problem: "Let a group control one podcast player from their own phones.",
     built: "A Django REST API and React client on the Spotify Web API.",
     stack: ["Django REST", "React", "Spotify API"],
-    ticketClass: "-rotate-[0.5deg] [--tilt-from:-3deg] motion-safe:[animation-delay:350ms]",
+    ticketClass: "-rotate-[0.5deg] [--tilt-from:-3deg] motion-safe:[animation-delay:450ms]",
     links: [
       { label: "Watch the demo", href: "https://www.youtube.com/watch?v=ASBGLWwAu1I" },
       { label: "Code on GitHub", href: "https://github.com/naiadbaksh/thought-garden" },
@@ -152,7 +231,7 @@ export const projects: Project[] = [
     built:
       "A Redux storefront with Firebase auth and data, and Stripe checkout, built from a course project and extended.",
     stack: ["React", "Redux", "Firebase", "Stripe"],
-    ticketClass: "rotate-[0.4deg] [--tilt-from:3deg] motion-safe:[animation-delay:450ms]",
+    ticketClass: "rotate-[0.4deg] [--tilt-from:3deg] motion-safe:[animation-delay:550ms]",
     links: [
       { label: "Live demo", href: "https://jovial-wozniak-c11748.netlify.app/" },
       { label: "Code on GitHub", href: "https://github.com/naiadbaksh/eCommerce" },
@@ -246,7 +325,7 @@ export const projects: Project[] = [
     problem: "Make search algorithms visible and intuitive.",
     built: "A grid that animates search and maze generation step by step.",
     stack: ["React", "Hooks"],
-    ticketClass: "-rotate-[0.3deg] [--tilt-from:-2deg] motion-safe:[animation-delay:550ms]",
+    ticketClass: "-rotate-[0.3deg] [--tilt-from:-2deg] motion-safe:[animation-delay:650ms]",
     links: [
       { label: "Live demo", href: "https://naiadbaksh.github.io/pathfinding/" },
       { label: "Code on GitHub", href: "https://github.com/naiadbaksh/pathfinding" },
